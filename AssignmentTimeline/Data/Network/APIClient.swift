@@ -52,6 +52,11 @@ struct APIClient {
 
     // MARK: - Methods
 
+    /// `URLSession`を使ってリクエストを送り, `Response`にデコードする.
+    /// - Parameters:
+    ///   - request: リクエスト
+    ///   - retryAttemptCount: リトライの試行回数. デフォルトは1回
+    /// - Returns: 成功した場合`Response`が流れる. 失敗した場合は`NetworkError`や`DecodingError`
     func send<Request, Response>(request: Request, retryAttemptCount: Int = 1) -> AnyPublisher<Response, Error>
         where Request: APIRequest, Request.Response == Response {
         guard let request = request.asURLRequest() else {
