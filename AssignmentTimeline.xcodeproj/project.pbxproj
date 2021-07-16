@@ -16,6 +16,7 @@
 		EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8600926A16FE200993DDA /* AssignmentTimelineTests.swift */; };
 		EFA8601526A16FE200993DDA /* AssignmentTimelineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8601426A16FE200993DDA /* AssignmentTimelineUITests.swift */; };
 		EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8602426A170DC00993DDA /* URLSessionProtocol.swift */; };
+		EFA8602826A172A600993DDA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8602726A172A600993DDA /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EFA8601426A16FE200993DDA /* AssignmentTimelineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTimelineUITests.swift; sourceTree = "<group>"; };
 		EFA8601626A16FE200993DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFA8602426A170DC00993DDA /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		EFA8602726A172A600993DDA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		EFA8602226A1709700993DDA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8602626A1727600993DDA /* Network */,
 				EFA8602326A170CA00993DDA /* Protocols */,
 			);
 			path = Data;
@@ -145,6 +148,14 @@
 				EFA8602426A170DC00993DDA /* URLSessionProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EFA8602626A1727600993DDA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8602726A172A600993DDA /* APIRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
 				EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */,
+				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
