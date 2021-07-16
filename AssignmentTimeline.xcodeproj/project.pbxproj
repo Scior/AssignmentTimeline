@@ -15,6 +15,7 @@
 		EFA85FFF26A16FE200993DDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA85FFD26A16FE200993DDA /* LaunchScreen.storyboard */; };
 		EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8600926A16FE200993DDA /* AssignmentTimelineTests.swift */; };
 		EFA8601526A16FE200993DDA /* AssignmentTimelineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8601426A16FE200993DDA /* AssignmentTimelineUITests.swift */; };
+		EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8602426A170DC00993DDA /* URLSessionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EFA8601026A16FE200993DDA /* AssignmentTimelineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentTimelineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA8601426A16FE200993DDA /* AssignmentTimelineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTimelineUITests.swift; sourceTree = "<group>"; };
 		EFA8601626A16FE200993DDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA8602426A170DC00993DDA /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		EFA85FF126A16FE100993DDA /* AssignmentTimeline */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8602226A1709700993DDA /* Data */,
 				EFA85FF226A16FE100993DDA /* AppDelegate.swift */,
 				EFA85FF426A16FE100993DDA /* SceneDelegate.swift */,
 				EFA85FF626A16FE100993DDA /* ViewController.swift */,
@@ -126,6 +129,22 @@
 				EFA8601626A16FE200993DDA /* Info.plist */,
 			);
 			path = AssignmentTimelineUITests;
+			sourceTree = "<group>";
+		};
+		EFA8602226A1709700993DDA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8602326A170CA00993DDA /* Protocols */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EFA8602326A170CA00993DDA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8602426A170DC00993DDA /* URLSessionProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
 				EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
