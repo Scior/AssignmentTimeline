@@ -56,7 +56,7 @@ struct LoginView: View {
                                 .stroke(viewStore.buttonColor, lineWidth: 2)
                         )
                 }
-                .disabled(!viewStore.isValidEmailAddress)
+                .disabled(!viewStore.hasValidInputs)
             }.padding(.horizontal, 24)
         }
     }
@@ -78,8 +78,12 @@ struct LoginView_Previews: PreviewProvider {
 // MARK: - Private extensions
 
 private extension LoginState {
+    var hasValidInputs: Bool {
+        return isValidPassword && isValidEmailAddress
+    }
+
     var buttonColor: Color {
-        if isValidEmailAddress {
+        if hasValidInputs {
             return .primary
         } else {
             return .secondary
