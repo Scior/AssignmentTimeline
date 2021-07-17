@@ -20,6 +20,8 @@ final class EmailAddressValidatorTests: XCTestCase {
             "first.last@hoge.com",
             "1234567890123456789012345678901234567890123456789012345678901234@hoge.org",
             "first.last@123.hoge.org",
+            "first+last@domain.com",
+            "___@hoge.com",
             "first.last@3com.com"
         ]
 
@@ -38,8 +40,8 @@ final class EmailAddressValidatorTests: XCTestCase {
         let addresses: [String] = [
             "first.last@sub.do,com",
             "first\\@last@hoge.org",
-            ".first.last@hoge.com",
-            "first..last@hoge.org"
+            "first.last@",
+            "first.last@hoge"
         ]
 
         for address in addresses {
