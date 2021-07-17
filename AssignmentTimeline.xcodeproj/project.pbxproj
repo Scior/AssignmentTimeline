@@ -33,6 +33,7 @@
 		EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605E26A2FF2D00993DDA /* SharedReducers.swift */; };
 		EFA8606526A3027400993DDA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EFA8604726A2B49900993DDA /* ComposableArchitecture */; };
 		EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */; };
+		EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		EFA8605C26A2FD9300993DDA /* LoginEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnvironment.swift; sourceTree = "<group>"; };
 		EFA8605E26A2FF2D00993DDA /* SharedReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedReducers.swift; sourceTree = "<group>"; };
 		EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidator.swift; sourceTree = "<group>"; };
+		EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */,
+				EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
+				EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */,
 				EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */,
 				EFA8603426A1750D00993DDA /* APIClientTests.swift in Sources */,
 			);
