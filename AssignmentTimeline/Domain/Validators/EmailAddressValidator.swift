@@ -13,10 +13,10 @@ protocol EmailAddressValidatorProtocol {
 
 struct EmailAddressValidator: Validator, EmailAddressValidatorProtocol {
     enum Const {
-        /// RFC5322に近い正規表現パターン
-        /// See: http://emailregex.com/
+        /// RFC5322を参考にした正規表現パターン. "の有無や.の位置については厳密に弾けない
+        /// See: https://emailregex.com/
         static let regex: NSRegularExpression? = try? NSRegularExpression(
-            pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            pattern: "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$"
         )
     }
 
