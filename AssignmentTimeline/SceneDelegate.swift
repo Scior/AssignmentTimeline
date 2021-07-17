@@ -18,7 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             rootView: LoginView(store: .init(
                 initialState: .empty,
                 reducer: SharedReducers.login,
-                environment: LoginEnvironment(emailAddressValidator: EmailAddressValidator())
+                environment: LoginEnvironment(
+                    emailAddressValidator: EmailAddressValidator(),
+                    loginPasswordValidator: LoginPasswordValidator()
+                )
             ))
         )
         self.window?.makeKeyAndVisible()

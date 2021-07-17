@@ -11,7 +11,7 @@ protocol LoginPasswordValidatorProtocol {
     func validate(value: String) -> Result<String, ValidationError>
 }
 
-struct LoginPasswordValidator: Validator, EmailAddressValidatorProtocol {
+struct LoginPasswordValidator: Validator, LoginPasswordValidatorProtocol {
     enum Const {
         static let regex: NSRegularExpression? = try? NSRegularExpression(pattern: "^[0-9a-zA-Z]{6,}$")
     }

@@ -7,4 +7,5 @@
 
 struct LoginEnvironment {
     let emailAddressValidator: EmailAddressValidatorProtocol
+    let loginPasswordValidator: LoginPasswordValidatorProtocol
 }

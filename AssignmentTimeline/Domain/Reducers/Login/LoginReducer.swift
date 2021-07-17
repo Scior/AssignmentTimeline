@@ -16,11 +16,21 @@ extension SharedReducers {
                 state.emailAddress = address
                 state.isValidEmailAddress = true
             case .failure:
+                state.emailAddress = address
                 state.isValidEmailAddress = false
             }
 
             return .none
         case let .didPasswordChange(password):
+            switch environment.loginPasswordValidator.validate(value: password) {
+            case let .success(password):
+                state.password = password
+                state.isValidPassword = true
+            case .failure:
+                state.password = password
+                state.isValidPassword = false
+            }
+
             return .none
         }
     }

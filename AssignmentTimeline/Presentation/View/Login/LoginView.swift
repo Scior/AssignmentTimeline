@@ -67,7 +67,10 @@ struct LoginView_Previews: PreviewProvider {
         LoginView(store: .init(
             initialState: .empty,
             reducer: SharedReducers.login,
-            environment: LoginEnvironment(emailAddressValidator: EmailAddressValidator())
+            environment: LoginEnvironment(
+                emailAddressValidator: EmailAddressValidator(),
+                loginPasswordValidator: LoginPasswordValidator()
+            )
         ))
     }
 }
