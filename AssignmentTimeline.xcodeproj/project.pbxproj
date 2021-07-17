@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,11 @@
 		EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */; };
 		EFA8604526A2B2C300993DDA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604426A2B2C300993DDA /* Validator.swift */; };
 		EFA8604826A2B49900993DDA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EFA8604726A2B49900993DDA /* ComposableArchitecture */; };
+		EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604B26A2BF7500993DDA /* LoginView.swift */; };
+		EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605226A2FCDA00993DDA /* LoginState.swift */; };
+		EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605526A2FCF800993DDA /* LoginAction.swift */; };
+		EFA8605926A2FD2600993DDA /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605826A2FD2600993DDA /* LoginReducer.swift */; };
+		EFA8605D26A2FD9300993DDA /* LoginEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605C26A2FD9300993DDA /* LoginEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidator.swift; sourceTree = "<group>"; };
 		EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidatorTests.swift; sourceTree = "<group>"; };
 		EFA8604426A2B2C300993DDA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		EFA8604B26A2BF7500993DDA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EFA8605226A2FCDA00993DDA /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		EFA8605526A2FCF800993DDA /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
+		EFA8605826A2FD2600993DDA /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
+		EFA8605C26A2FD9300993DDA /* LoginEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +226,7 @@
 		EFA8603926A29FE900993DDA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8604926A2BF5800993DDA /* View */,
 				EFA8603B26A2A00400993DDA /* ViewControllers */,
 				EFA8603A26A29FF500993DDA /* Storyboards */,
 			);
@@ -242,6 +253,10 @@
 		EFA8603C26A2A27700993DDA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8604D26A2F2A600993DDA /* Actions */,
+				EFA8605A26A2FD7400993DDA /* Environment */,
+				EFA8604F26A2F2E800993DDA /* Reducers */,
+				EFA8604E26A2F2DA00993DDA /* State */,
 				EFA8603D26A2A28100993DDA /* Validators */,
 			);
 			path = Domain;
@@ -270,6 +285,86 @@
 				EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		EFA8604926A2BF5800993DDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8604A26A2BF6000993DDA /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFA8604A26A2BF6000993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8604B26A2BF7500993DDA /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA8604D26A2F2A600993DDA /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605426A2FCED00993DDA /* Login */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		EFA8604E26A2F2DA00993DDA /* State */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605126A2FCCF00993DDA /* Login */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		EFA8604F26A2F2E800993DDA /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605726A2FD1800993DDA /* Login */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		EFA8605126A2FCCF00993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605226A2FCDA00993DDA /* LoginState.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA8605426A2FCED00993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605526A2FCF800993DDA /* LoginAction.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA8605726A2FD1800993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605826A2FD2600993DDA /* LoginReducer.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA8605A26A2FD7400993DDA /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605B26A2FD7F00993DDA /* Login */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		EFA8605B26A2FD7F00993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8605C26A2FD9300993DDA /* LoginEnvironment.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,12 +528,17 @@
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
+				EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */,
 				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
 				EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */,
+				EFA8605926A2FD2600993DDA /* LoginReducer.swift in Sources */,
+				EFA8605D26A2FD9300993DDA /* LoginEnvironment.swift in Sources */,
 				EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */,
 				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
+				EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */,
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
+				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
