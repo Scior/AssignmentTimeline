@@ -24,6 +24,7 @@
 		EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603526A175FB00993DDA /* HTTPMethod.swift */; };
 		EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */; };
 		EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */; };
+		EFA8604526A2B2C300993DDA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604426A2B2C300993DDA /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EFA8603526A175FB00993DDA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidator.swift; sourceTree = "<group>"; };
 		EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidatorTests.swift; sourceTree = "<group>"; };
+		EFA8604426A2B2C300993DDA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */,
+				EFA8604426A2B2C300993DDA /* Validator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
+				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
 				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
 				EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */,
