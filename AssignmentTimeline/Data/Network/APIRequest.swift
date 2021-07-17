@@ -12,12 +12,17 @@ protocol APIRequest {
     var url: String { get }
     var queryItems: [URLQueryItem]? { get }
     var method: HTTPMethod { get }
+    var body: Data? { get }
 }
 
 // MARK: - Default values
 
 extension APIRequest {
     var queryItems: [URLQueryItem]? {
+        return nil
+    }
+
+    var body: Encodable? {
         return nil
     }
 }
@@ -34,6 +39,8 @@ extension APIRequest {
 
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        request.httpBody = body
+
         return request
     }
 }
