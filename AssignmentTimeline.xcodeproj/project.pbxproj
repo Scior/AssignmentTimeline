@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		EFA8605926A2FD2600993DDA /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605826A2FD2600993DDA /* LoginReducer.swift */; };
 		EFA8605D26A2FD9300993DDA /* LoginEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605C26A2FD9300993DDA /* LoginEnvironment.swift */; };
 		EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8605E26A2FF2D00993DDA /* SharedReducers.swift */; };
+		EFA8606526A3027400993DDA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EFA8604726A2B49900993DDA /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFA8604826A2B49900993DDA /* ComposableArchitecture in Frameworks */,
+				EFA8606526A3027400993DDA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

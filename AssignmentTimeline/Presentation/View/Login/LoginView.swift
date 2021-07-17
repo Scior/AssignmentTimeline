@@ -48,14 +48,15 @@ struct LoginView: View {
                     Text("ログイン")
                         .font(.body)
                         .bold()
-                        .foregroundColor(.secondary)
+                        .foregroundColor(viewStore.buttonColor)
                         .padding(.horizontal, 48)
                         .padding(.vertical, 8)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color.secondary, lineWidth: 2)
+                                .stroke(viewStore.buttonColor, lineWidth: 2)
                         )
                 }
+                .disabled(!viewStore.isValidEmailAddress)
             }.padding(.horizontal, 24)
         }
     }
@@ -66,7 +67,19 @@ struct LoginView_Previews: PreviewProvider {
         LoginView(store: .init(
             initialState: .empty,
             reducer: SharedReducers.login,
-            environment: LoginEnvironment()
+            environment: LoginEnvironment(emailAddressValidator: EmailAddressValidator())
         ))
+    }
+}
+
+// MARK: - Private extensions
+
+private extension LoginState {
+    var buttonColor: Color {
+        if isValidEmailAddress {
+            return .primary
+        } else {
+            return .secondary
+        }
     }
 }

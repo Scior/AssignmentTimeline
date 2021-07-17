@@ -6,8 +6,15 @@
 //
 
 struct LoginState: Equatable {
-    let emailAddress: String
-    let password: String
+    var emailAddress: String
+    var password: String
+    var isValidEmailAddress: Bool
+    var isValidPassword: Bool
 
-    static let empty = LoginState(emailAddress: "", password: "")
+    static let empty = LoginState(
+        emailAddress: "",
+        password: "",
+        isValidEmailAddress: false,
+        isValidPassword: false
+    )
 }
