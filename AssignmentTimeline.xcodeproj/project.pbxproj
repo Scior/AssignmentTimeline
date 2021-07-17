@@ -22,6 +22,9 @@
 		EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8602F26A174BF00993DDA /* Encodable+.swift */; };
 		EFA8603426A1750D00993DDA /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603326A1750D00993DDA /* APIClientTests.swift */; };
 		EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603526A175FB00993DDA /* HTTPMethod.swift */; };
+		EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */; };
+		EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */; };
+		EFA8604526A2B2C300993DDA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604426A2B2C300993DDA /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		EFA8602F26A174BF00993DDA /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		EFA8603326A1750D00993DDA /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		EFA8603526A175FB00993DDA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidator.swift; sourceTree = "<group>"; };
+		EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidatorTests.swift; sourceTree = "<group>"; };
+		EFA8604426A2B2C300993DDA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8602226A1709700993DDA /* Data */,
+				EFA8603C26A2A27700993DDA /* Domain */,
 				EFA8603926A29FE900993DDA /* Presentation */,
 				EFA8603826A29FD100993DDA /* Resources */,
 				EFA85FF226A16FE100993DDA /* AppDelegate.swift */,
@@ -127,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8603126A174EF00993DDA /* Data */,
+				EFA8604026A2A4F200993DDA /* Domain */,
 				EFA8602C26A1743900993DDA /* TestUtils */,
 				EFA8600926A16FE200993DDA /* AssignmentTimelineTests.swift */,
 				EFA8600B26A16FE200993DDA /* Info.plist */,
@@ -227,6 +235,39 @@
 				EFA85FF626A16FE100993DDA /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EFA8603C26A2A27700993DDA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8603D26A2A28100993DDA /* Validators */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EFA8603D26A2A28100993DDA /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */,
+				EFA8604426A2B2C300993DDA /* Validator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		EFA8604026A2A4F200993DDA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8604126A2A4FB00993DDA /* Validators */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EFA8604126A2A4FB00993DDA /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +423,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
+				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
+				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
 				EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */,
 				EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */,
 				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
@@ -398,6 +441,7 @@
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
+				EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */,
 				EFA8603426A1750D00993DDA /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
