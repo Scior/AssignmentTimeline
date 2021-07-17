@@ -23,6 +23,7 @@
 		EFA8603426A1750D00993DDA /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603326A1750D00993DDA /* APIClientTests.swift */; };
 		EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603526A175FB00993DDA /* HTTPMethod.swift */; };
 		EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */; };
+		EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		EFA8603326A1750D00993DDA /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		EFA8603526A175FB00993DDA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidator.swift; sourceTree = "<group>"; };
+		EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAddressValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8603126A174EF00993DDA /* Data */,
+				EFA8604026A2A4F200993DDA /* Domain */,
 				EFA8602C26A1743900993DDA /* TestUtils */,
 				EFA8600926A16FE200993DDA /* AssignmentTimelineTests.swift */,
 				EFA8600B26A16FE200993DDA /* Info.plist */,
@@ -244,6 +247,22 @@
 			isa = PBXGroup;
 			children = (
 				EFA8603E26A2A29100993DDA /* EmailAddressValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		EFA8604026A2A4F200993DDA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8604126A2A4FB00993DDA /* Validators */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EFA8604126A2A4FB00993DDA /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8604226A2A51D00993DDA /* EmailAddressValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -418,6 +437,7 @@
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
+				EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */,
 				EFA8603426A1750D00993DDA /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
