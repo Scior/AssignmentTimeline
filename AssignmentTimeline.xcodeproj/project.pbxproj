@@ -114,12 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				EFA8602226A1709700993DDA /* Data */,
+				EFA8603926A29FE900993DDA /* Presentation */,
+				EFA8603826A29FD100993DDA /* Resources */,
 				EFA85FF226A16FE100993DDA /* AppDelegate.swift */,
 				EFA85FF426A16FE100993DDA /* SceneDelegate.swift */,
-				EFA85FF626A16FE100993DDA /* ViewController.swift */,
-				EFA85FF826A16FE100993DDA /* Main.storyboard */,
-				EFA85FFB26A16FE200993DDA /* Assets.xcassets */,
-				EFA85FFD26A16FE200993DDA /* LaunchScreen.storyboard */,
 				EFA8600026A16FE200993DDA /* Info.plist */,
 			);
 			path = AssignmentTimeline;
@@ -195,6 +193,40 @@
 				EFA8603326A1750D00993DDA /* APIClientTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		EFA8603826A29FD100993DDA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EFA85FFB26A16FE200993DDA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EFA8603926A29FE900993DDA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8603B26A2A00400993DDA /* ViewControllers */,
+				EFA8603A26A29FF500993DDA /* Storyboards */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EFA8603A26A29FF500993DDA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EFA85FF826A16FE100993DDA /* Main.storyboard */,
+				EFA85FFD26A16FE200993DDA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EFA8603B26A2A00400993DDA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFA85FF626A16FE100993DDA /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
