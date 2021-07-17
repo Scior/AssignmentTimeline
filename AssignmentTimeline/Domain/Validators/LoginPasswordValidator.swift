@@ -29,7 +29,7 @@ struct LoginPasswordValidator: Validator, EmailAddressValidatorProtocol {
         if regex.firstMatch(in: value, range: .init(location: 0, length: value.count)) != nil {
             return .success(value)
         } else {
-            return .failure(.notPassed(reason: ""))
+            return .failure(.notPassed)
         }
     }
 }
