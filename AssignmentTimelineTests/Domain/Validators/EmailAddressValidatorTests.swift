@@ -15,20 +15,26 @@ final class EmailAddressValidatorTests: XCTestCase {
 
     func testValidateWithValidAddresses() {
         // See: https://code.iamcal.com/php/rfc822/tests/
+        // See: https://datatracker.ietf.org/doc/html/rfc5322
         let addresses: [String] = [
             "first.last@hoge.com",
             "1234567890123456789012345678901234567890123456789012345678901234@hoge.org",
-            "\"first\\\"last\"@iana.org",
+            "first.last@123.hoge.org",
             "first.last@3com.com"
         ]
 
         for address in addresses {
-            XCTAssertEqual(try validator.validate(value: address).get(), address, "Validation is supposed to succeed")
+            XCTAssertEqual(
+                try validator.validate(value: address).get(),
+                address,
+                "Validation is supposed to succeed with: \(address)"
+            )
         }
     }
 
     func testValidateWithInvalidAddresses() {
         // See: https://code.iamcal.com/php/rfc822/tests/
+        // See: https://datatracker.ietf.org/doc/html/rfc5322
         let addresses: [String] = [
             "first.last@sub.do,com",
             "first\\@last@hoge.org",
@@ -38,7 +44,7 @@ final class EmailAddressValidatorTests: XCTestCase {
 
         for address in addresses {
             guard case .failure(.notPassed) = validator.validate(value: address) else {
-                return XCTFail("Validation is supposed to fail")
+                return XCTFail("Validation is supposed to fail with: \(address)")
             }
         }
     }
