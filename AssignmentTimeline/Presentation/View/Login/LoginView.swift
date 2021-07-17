@@ -65,7 +65,7 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(store: .init(
             initialState: .empty,
-            reducer: loginReducer,
+            reducer: SharedReducers.login,
             environment: LoginEnvironment()
         ))
     }

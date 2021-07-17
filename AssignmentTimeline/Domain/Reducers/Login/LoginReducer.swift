@@ -5,8 +5,10 @@
 //  Created by Fujino Suita on 2021/07/17.
 //
 
-import ComposableArchitecture
+import struct ComposableArchitecture.Reducer
 
-let loginReducer = Reducer<LoginState, LoginAction, LoginEnvironment> { _, _, _ in
-    return .none
+extension SharedReducers {
+    static let login = Reducer<LoginState, LoginAction, LoginEnvironment> { _, _, _ in
+        return .none
+    }
 }
