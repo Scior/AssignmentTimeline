@@ -37,7 +37,7 @@ final class APIClientTests: XCTestCase {
 
         waitForPublishingError(publisher: client.send(request: TestRequest())) { error in
             if let error = error as? APIClient.NetworkError,
-                case let .failed(code, _) = error {
+               case let .failed(code, _) = error {
                 return code == statusCode
             }
 
@@ -52,7 +52,7 @@ final class APIClientTests: XCTestCase {
 
         waitForPublishingError(publisher: client.send(request: InvalidRequest())) { error in
             if let error = error as? APIClient.NetworkError,
-                case .invalidRequest = error {
+               case .invalidRequest = error {
                 return true
             }
 
@@ -103,4 +103,3 @@ extension APIClientTests {
         static let dummyURL: URL = .init(string: "https://hogehoge.com/")!
     }
 }
-

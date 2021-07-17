@@ -15,7 +15,7 @@ extension XCTestCase {
     ///   - publisher: テスト対象の`AnyPublisher`
     ///   - timeout: タイムアウト値. デフォルトで1s
     func waitForPublishing<V, E>(_ expected: V, publisher: AnyPublisher<V, E>, timeout: TimeInterval = 1.0)
-        where V: Equatable {
+    where V: Equatable {
         let expectation = XCTestExpectation(description: "To be \(expected)")
         var cancellables = Set<AnyCancellable>()
         publisher
@@ -60,4 +60,3 @@ extension XCTestCase {
         wait(for: [expectation], timeout: timeout)
     }
 }
-
