@@ -8,7 +8,12 @@
 import Combine
 import Foundation
 
-struct APIClient {
+protocol APIClientProtocol {
+    func send<Request, Response>(request: Request, retryAttemptCount: Int) -> AnyPublisher<Response, Error>
+    where Request: APIRequest, Request.Response == Response
+}
+
+struct APIClient: APIClientProtocol {
     // MARK: - Structs
 
     struct Dependency {
