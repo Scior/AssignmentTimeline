@@ -5,28 +5,25 @@
 //  Created by Fujino Suita on 2021/07/16.
 //
 
+import ComposableArchitecture
+import SwiftUI
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        self.window = (scene as? UIWindowScene).map(UIWindow.init(windowScene:))
+        self.window?.rootViewController = UIHostingController(
+            rootView: LoginView(store: .init(
+                initialState: .empty,
+                reducer: SharedReducers.login,
+                environment: LoginEnvironment(
+                    emailAddressValidator: EmailAddressValidator(),
+                    loginPasswordValidator: LoginPasswordValidator()
+                )
+            ))
+        )
+        self.window?.makeKeyAndVisible()
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {
-    }
-
-    func sceneDidBecomeActive(_ scene: UIScene) {
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-    }
-
 }

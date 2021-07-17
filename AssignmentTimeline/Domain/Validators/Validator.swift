@@ -14,12 +14,12 @@ protocol Validator {
 }
 
 enum ValidationError: LocalizedError {
-    case notPassed(reason: String)
+    case notPassed
 
     var errorDescription: String? {
         switch self {
-        case let .notPassed(reason):
-            return "Validation failed because: \(reason)"
+        case .notPassed:
+            return "Validation failed"
         }
     }
 }
