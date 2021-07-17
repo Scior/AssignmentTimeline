@@ -34,6 +34,7 @@
 		EFA8606526A3027400993DDA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EFA8604726A2B49900993DDA /* ComposableArchitecture */; };
 		EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */; };
 		EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */; };
+		EFA8606D26A3121A00993DDA /* LoginTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		EFA8605E26A2FF2D00993DDA /* SharedReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedReducers.swift; sourceTree = "<group>"; };
 		EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidator.swift; sourceTree = "<group>"; };
 		EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidatorTests.swift; sourceTree = "<group>"; };
+		EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 		EFA8604A26A2BF6000993DDA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */,
 				EFA8604B26A2BF7500993DDA /* LoginView.swift */,
 			);
 			path = Login;
@@ -543,6 +546,7 @@
 				EFA8605926A2FD2600993DDA /* LoginReducer.swift in Sources */,
 				EFA8605D26A2FD9300993DDA /* LoginEnvironment.swift in Sources */,
 				EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */,
+				EFA8606D26A3121A00993DDA /* LoginTextInputView.swift in Sources */,
 				EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */,
 				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
 				EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */,
