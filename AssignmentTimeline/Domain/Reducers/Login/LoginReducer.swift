@@ -40,7 +40,9 @@ extension SharedReducers {
                 .receive(on: environment.mainQueue)
                 .catchToEffect()
                 .map(LoginAction.loginResponse)
-        case let .loginResponse(result):
+        case let .loginResponse(.success(response)):
+            return .none
+        case let .loginResponse(.failure(error)):
             return .none
         }
     }

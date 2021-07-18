@@ -5,6 +5,7 @@
 //  Created by Fujino Suita on 2021/07/16.
 //
 
+import os.log
 import Combine
 import Foundation
 
@@ -76,6 +77,8 @@ struct APIClient: APIClientProtocol {
     /// - Returns: 成功した場合`Response`が流れる. 失敗した場合は`NetworkError`や`DecodingError`
     func send<Request, Response>(request: Request, retryAttemptCount: Int) -> AnyPublisher<Response, Error>
     where Request: APIRequest, Request.Response == Response {
+        os_log(.debug, log: OSLog.network, "[%s] %s", request.method.rawValue, request.url)
+
         guard let request = request.asURLRequest() else {
             return Fail<Response, Error>(error: NetworkError.invalidRequest).eraseToAnyPublisher()
         }

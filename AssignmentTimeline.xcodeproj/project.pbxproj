@@ -38,6 +38,7 @@
 		EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607026A31C6A00993DDA /* LoginRepository.swift */; };
 		EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607326A31CE500993DDA /* LoginRequest.swift */; };
 		EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607626A31F4200993DDA /* LoginResponse.swift */; };
+		EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607A26A3B03700993DDA /* OSLog+network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		EFA8607026A31C6A00993DDA /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		EFA8607326A31CE500993DDA /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EFA8607626A31F4200993DDA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		EFA8607A26A3B03700993DDA /* OSLog+network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+network.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			children = (
 				EFA8607226A31CD400993DDA /* Requests */,
 				EFA8607526A31EB700993DDA /* Responses */,
+				EFA8607926A3B02500993DDA /* Utils */,
 				EFA8602726A172A600993DDA /* APIRequest.swift */,
 				EFA8602926A173F000993DDA /* APIClient.swift */,
 				EFA8603526A175FB00993DDA /* HTTPMethod.swift */,
@@ -420,6 +423,14 @@
 			path = Responses;
 			sourceTree = "<group>";
 		};
+		EFA8607926A3B02500993DDA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607A26A3B03700993DDA /* OSLog+network.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -581,6 +592,7 @@
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
+				EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */,
 				EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
 				EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */,
