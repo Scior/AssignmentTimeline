@@ -22,7 +22,7 @@ extension APIRequest {
         return nil
     }
 
-    var body: Encodable? {
+    var body: Data? {
         return nil
     }
 }
