@@ -10,7 +10,7 @@ import struct ComposableArchitecture.Reducer
 extension SharedReducers {
     static let login = Reducer<LoginState, LoginAction, LoginEnvironment> { state, action, environment in
         switch action {
-        case let .didEmailAddressChange(address):
+        case let .emailAddressChanged(address):
             switch environment.emailAddressValidator.validate(value: address) {
             case let .success(address):
                 state.emailAddress = address
@@ -21,7 +21,7 @@ extension SharedReducers {
             }
 
             return .none
-        case let .didPasswordChange(password):
+        case let .passwordChanged(password):
             switch environment.loginPasswordValidator.validate(value: password) {
             case let .success(password):
                 state.password = password
@@ -31,6 +31,16 @@ extension SharedReducers {
                 state.isValidPassword = false
             }
 
+            return .none
+        case .loginButtonTapped:
+            let request = LoginRequest(requestBody: .init(mailAddress: state.emailAddress, password: state.password))
+
+            return environment.repository
+                .login(request: request)
+                .receive(on: environment.mainQueue)
+                .catchToEffect()
+                .map(LoginAction.loginResponse)
+        case let .loginResponse(result):
             return .none
         }
     }

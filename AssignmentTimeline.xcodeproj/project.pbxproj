@@ -35,6 +35,9 @@
 		EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */; };
 		EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */; };
 		EFA8606D26A3121A00993DDA /* LoginTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */; };
+		EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607026A31C6A00993DDA /* LoginRepository.swift */; };
+		EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607326A31CE500993DDA /* LoginRequest.swift */; };
+		EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607626A31F4200993DDA /* LoginResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidator.swift; sourceTree = "<group>"; };
 		EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidatorTests.swift; sourceTree = "<group>"; };
 		EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextInputView.swift; sourceTree = "<group>"; };
+		EFA8607026A31C6A00993DDA /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		EFA8607326A31CE500993DDA /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		EFA8607626A31F4200993DDA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,7 @@
 			children = (
 				EFA8602626A1727600993DDA /* Network */,
 				EFA8602326A170CA00993DDA /* Protocols */,
+				EFA8606E26A31C1100993DDA /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -191,6 +198,8 @@
 		EFA8602626A1727600993DDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8607226A31CD400993DDA /* Requests */,
+				EFA8607526A31EB700993DDA /* Responses */,
 				EFA8602726A172A600993DDA /* APIRequest.swift */,
 				EFA8602926A173F000993DDA /* APIClient.swift */,
 				EFA8603526A175FB00993DDA /* HTTPMethod.swift */,
@@ -379,6 +388,38 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		EFA8606E26A31C1100993DDA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8606F26A31C2C00993DDA /* Login */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EFA8606F26A31C2C00993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607026A31C6A00993DDA /* LoginRepository.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA8607226A31CD400993DDA /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607326A31CE500993DDA /* LoginRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		EFA8607526A31EB700993DDA /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607626A31F4200993DDA /* LoginResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -539,6 +580,8 @@
 			files = (
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
+				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
+				EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
 				EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */,
 				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
@@ -554,6 +597,7 @@
 				EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */,
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
+				EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

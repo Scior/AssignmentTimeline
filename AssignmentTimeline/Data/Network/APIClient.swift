@@ -16,13 +16,14 @@ protocol APIClientProtocol {
 }
 
 struct APIClient: APIClientProtocol {
+
+    static let shared = APIClient(dependency: .init(jsonDecoder: defaultJSONDecoder, urlSession: URLSession.shared))
+
     // MARK: - Structs
 
     struct Dependency {
         let jsonDecoder: JSONDecoder
         let urlSession: URLSessionProtocol
-
-        static let `default`: Dependency = .init(jsonDecoder: APIClient.defaultJSONDecoder, urlSession: URLSession.shared)
     }
     enum NetworkError: LocalizedError {
         case invalidRequest

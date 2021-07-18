@@ -18,18 +18,18 @@ struct LoginView: View {
                     title: "メールアドレス",
                     binding: viewStore.binding(
                         get: \.emailAddress,
-                        send: LoginAction.didEmailAddressChange
+                        send: LoginAction.emailAddressChanged
                     )
                 )
                 LoginTextInputView(
                     title: "パスワード",
                     binding: viewStore.binding(
                         get: \.password,
-                        send: LoginAction.didPasswordChange
+                        send: LoginAction.passwordChanged
                     )
                 )
                 Button {
-                    print("hoge") // FIXME:
+                    viewStore.send(.loginButtonTapped)
                 } label: {
                     Text("ログイン")
                         .font(.body)
@@ -55,7 +55,11 @@ struct LoginView_Previews: PreviewProvider {
             reducer: SharedReducers.login,
             environment: LoginEnvironment(
                 emailAddressValidator: EmailAddressValidator(),
-                loginPasswordValidator: LoginPasswordValidator()
+                loginPasswordValidator: LoginPasswordValidator(),
+                repository: LoginRepository(dependency: .init(
+                    client: APIClient.shared
+                )),
+                mainQueue: .main
             )
         ))
     }

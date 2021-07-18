@@ -20,7 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 reducer: SharedReducers.login,
                 environment: LoginEnvironment(
                     emailAddressValidator: EmailAddressValidator(),
-                    loginPasswordValidator: LoginPasswordValidator()
+                    loginPasswordValidator: LoginPasswordValidator(),
+                    repository: LoginRepository(dependency: .init(
+                        client: APIClient.shared
+                    )),
+                    mainQueue: .main
                 )
             ))
         )
