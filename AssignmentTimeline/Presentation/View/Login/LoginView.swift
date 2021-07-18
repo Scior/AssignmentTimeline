@@ -16,6 +16,7 @@ struct LoginView: View {
             VStack(alignment: .center, spacing: 32) {
                 LoginTextInputView(
                     title: "メールアドレス",
+                    shouldMaskText: false,
                     binding: viewStore.binding(
                         get: \.emailAddress,
                         send: LoginAction.emailAddressChanged
@@ -23,6 +24,7 @@ struct LoginView: View {
                 )
                 LoginTextInputView(
                     title: "パスワード",
+                    shouldMaskText: true,
                     binding: viewStore.binding(
                         get: \.password,
                         send: LoginAction.passwordChanged
