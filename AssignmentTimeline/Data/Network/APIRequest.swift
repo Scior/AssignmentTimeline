@@ -38,8 +38,11 @@ extension APIRequest {
         }
 
         var request = URLRequest(url: url)
+        if let body = body {
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = body
+        }
         request.httpMethod = method.rawValue
-        request.httpBody = body
 
         return request
     }
