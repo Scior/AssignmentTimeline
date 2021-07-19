@@ -36,9 +36,7 @@ final class TimelineRepositoryTests: XCTestCase {
                 pickUsers: [.init(id: 12, name: "DDD", image: "mmm")]
             )
         ]
-        apiClientMock.publisher = Just(response)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
+        apiClientMock.publisher = justAnyError(response)
 
         waitForPublishing(
             response,
