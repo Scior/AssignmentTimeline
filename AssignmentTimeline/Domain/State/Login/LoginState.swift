@@ -10,11 +10,13 @@ struct LoginState: Equatable {
     var password: String
     var isValidEmailAddress: Bool
     var isValidPassword: Bool
+    var alertState: LoginAlertState
 
     static let empty = LoginState(
         emailAddress: "",
         password: "",
         isValidEmailAddress: false,
-        isValidPassword: false
+        isValidPassword: false,
+        alertState: .init()
     )
 }

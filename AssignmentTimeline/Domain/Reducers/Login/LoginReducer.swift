@@ -5,7 +5,7 @@
 //  Created by Fujino Suita on 2021/07/17.
 //
 
-import struct ComposableArchitecture.Reducer
+import ComposableArchitecture
 
 extension SharedReducers {
     static let login = Reducer<LoginState, LoginAction, LoginEnvironment> { state, action, environment in
@@ -41,8 +41,22 @@ extension SharedReducers {
                 .catchToEffect()
                 .map(LoginAction.loginResponse)
         case let .loginResponse(.success(response)):
+            state.alertState.errorType = nil
+
             return .none
         case let .loginResponse(.failure(error)):
+            switch error {
+            case let APIClient.NetworkError.failed(statusCode: code, _) where code == 401:
+                // 401の時だけパスワードを消しておく
+                state.password = ""
+                state.isValidPassword = false
+                state.alertState = .init(errorType: .incorrectInputs)
+            default:
+                state.alertState = .init(errorType: .others)
+            }
+
+            return .none
+        case .alert:
             return .none
         }
     }

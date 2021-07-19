@@ -31,10 +31,9 @@ struct LoginView: View {
                     )
                 )
                 VStack(alignment: .center, spacing: 16) {
-                    LoginAlertView(store: .init(
-                        initialState: .init(),
-                        reducer: SharedReducers.loginAlert,
-                        environment: EmptyEnvironment()
+                    LoginAlertView(store: self.store.scope(
+                        state: \.alertState,
+                        action: LoginAction.alert
                     ))
                     Button {
                         viewStore.send(.loginButtonTapped)

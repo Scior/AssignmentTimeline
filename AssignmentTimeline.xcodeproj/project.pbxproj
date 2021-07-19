@@ -39,11 +39,10 @@
 		EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607326A31CE500993DDA /* LoginRequest.swift */; };
 		EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607626A31F4200993DDA /* LoginResponse.swift */; };
 		EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607A26A3B03700993DDA /* OSLog+network.swift */; };
-		EFA8607D26A462C000993DDA /* LoginAlertReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607C26A462C000993DDA /* LoginAlertReducer.swift */; };
-		EFA8607F26A462E000993DDA /* LoginAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607E26A462E000993DDA /* LoginAlertAction.swift */; };
 		EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608026A462FF00993DDA /* LoginAlertState.swift */; };
 		EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608226A5083700993DDA /* LoginAlertView.swift */; };
 		EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */; };
+		EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608626A5285300993DDA /* EmptyAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,11 +100,10 @@
 		EFA8607326A31CE500993DDA /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EFA8607626A31F4200993DDA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		EFA8607A26A3B03700993DDA /* OSLog+network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+network.swift"; sourceTree = "<group>"; };
-		EFA8607C26A462C000993DDA /* LoginAlertReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertReducer.swift; sourceTree = "<group>"; };
-		EFA8607E26A462E000993DDA /* LoginAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertAction.swift; sourceTree = "<group>"; };
 		EFA8608026A462FF00993DDA /* LoginAlertState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertState.swift; sourceTree = "<group>"; };
 		EFA8608226A5083700993DDA /* LoginAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertView.swift; sourceTree = "<group>"; };
 		EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyEnvironment.swift; sourceTree = "<group>"; };
+		EFA8608626A5285300993DDA /* EmptyAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +338,7 @@
 		EFA8604D26A2F2A600993DDA /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8608626A5285300993DDA /* EmptyAction.swift */,
 				EFA8605426A2FCED00993DDA /* Login */,
 			);
 			path = Actions;
@@ -375,7 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				EFA8605526A2FCF800993DDA /* LoginAction.swift */,
-				EFA8607E26A462E000993DDA /* LoginAlertAction.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -383,7 +381,6 @@
 		EFA8605726A2FD1800993DDA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				EFA8607C26A462C000993DDA /* LoginAlertReducer.swift */,
 				EFA8605826A2FD2600993DDA /* LoginReducer.swift */,
 			);
 			path = Login;
@@ -605,8 +602,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */,
+				EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */,
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
-				EFA8607D26A462C000993DDA /* LoginAlertReducer.swift in Sources */,
 				EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
@@ -618,7 +615,6 @@
 				EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */,
 				EFA8605926A2FD2600993DDA /* LoginReducer.swift in Sources */,
 				EFA8605D26A2FD9300993DDA /* LoginEnvironment.swift in Sources */,
-				EFA8607F26A462E000993DDA /* LoginAlertAction.swift in Sources */,
 				EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */,
 				EFA8606D26A3121A00993DDA /* LoginTextInputView.swift in Sources */,
 				EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */,

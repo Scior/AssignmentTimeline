@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 struct LoginAlertView: View {
-    let store: Store<LoginAlertState, LoginAlertAction>
+    let store: Store<LoginAlertState, EmptyAction>
 
     var body: some View {
         WithViewStore(self.store) { viewStore in
@@ -25,7 +25,7 @@ struct LoginAlertView_Previews: PreviewProvider {
     static var previews: some View {
         LoginAlertView(store: .init(
             initialState: .init(errorType: .incorrectInputs),
-            reducer: SharedReducers.loginAlert,
+            reducer: Reducer.empty,
             environment: EmptyEnvironment()
         ))
     }

@@ -10,4 +10,5 @@ enum LoginAction {
     case passwordChanged(String)
     case loginButtonTapped
     case loginResponse(Result<LoginResponse, Error>)
+    case alert(EmptyAction) // 現状はalertからのactionはないので何もしない
 }
