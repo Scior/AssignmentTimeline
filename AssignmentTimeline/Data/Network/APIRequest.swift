@@ -9,7 +9,7 @@ import Foundation
 
 protocol APIRequest {
     associatedtype Response: Decodable
-    var url: String { get }
+    var path: String { get }
     var queryItems: [URLQueryItem]? { get }
     var method: HTTPMethod { get }
     var body: Data? { get }
@@ -30,8 +30,9 @@ extension APIRequest {
 // MARK: - Methods
 
 extension APIRequest {
-    func asURLRequest() -> URLRequest? {
-        var components = URLComponents(string: url)
+    /// URLRequestに変換する.
+    func asURLRequest(baseURL: String) -> URLRequest? {
+        var components = URLComponents(string: baseURL + path)
         components?.queryItems = queryItems
         guard let url = components?.url else {
             return nil

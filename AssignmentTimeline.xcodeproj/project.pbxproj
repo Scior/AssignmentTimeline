@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF8C9F5A26A578F600625826 /* TimelineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5926A578F600625826 /* TimelineRequest.swift */; };
+		EF8C9F5C26A5792300625826 /* TimelineResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5B26A5792300625826 /* TimelineResponse.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* ViewController.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF8C9F5926A578F600625826 /* TimelineRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRequest.swift; sourceTree = "<group>"; };
+		EF8C9F5B26A5792300625826 /* TimelineResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineResponse.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -432,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8607326A31CE500993DDA /* LoginRequest.swift */,
+				EF8C9F5926A578F600625826 /* TimelineRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8607626A31F4200993DDA /* LoginResponse.swift */,
+				EF8C9F5B26A5792300625826 /* TimelineResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -648,6 +654,7 @@
 				EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
+				EF8C9F5A26A578F600625826 /* TimelineRequest.swift in Sources */,
 				EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */,
 				EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
@@ -667,6 +674,7 @@
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
 				EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */,
+				EF8C9F5C26A5792300625826 /* TimelineResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

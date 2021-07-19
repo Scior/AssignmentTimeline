@@ -14,7 +14,7 @@ struct LoginRequest: APIRequest {
         let password: String
     }
 
-    let url = "https://us-central1-android-technical-exam.cloudfunctions.net/" + "login" // FIXME: Const
+    let path = "/login"
     let method: HTTPMethod = .post
     let requestBody: Body
 
