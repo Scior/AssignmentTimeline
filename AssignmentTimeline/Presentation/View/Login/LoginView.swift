@@ -30,21 +30,28 @@ struct LoginView: View {
                         send: LoginAction.passwordChanged
                     )
                 )
-                Button {
-                    viewStore.send(.loginButtonTapped)
-                } label: {
-                    Text("ログイン")
-                        .font(.body)
-                        .bold()
-                        .foregroundColor(viewStore.buttonColor)
-                        .padding(.horizontal, 48)
-                        .padding(.vertical, 8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(viewStore.buttonColor, lineWidth: 2)
-                        )
+                VStack(alignment: .center, spacing: 16) {
+                    LoginAlertView(store: .init(
+                        initialState: .init(),
+                        reducer: SharedReducers.loginAlert,
+                        environment: EmptyEnvironment()
+                    ))
+                    Button {
+                        viewStore.send(.loginButtonTapped)
+                    } label: {
+                        Text("ログイン")
+                            .font(.body)
+                            .bold()
+                            .foregroundColor(viewStore.buttonColor)
+                            .padding(.horizontal, 48)
+                            .padding(.vertical, 8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(viewStore.buttonColor, lineWidth: 2)
+                            )
+                    }
+                    .disabled(!viewStore.hasValidInputs)
                 }
-                .disabled(!viewStore.hasValidInputs)
             }.padding(.horizontal, 24)
         }
     }
