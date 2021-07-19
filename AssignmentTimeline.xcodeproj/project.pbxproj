@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF8C9F5A26A578F600625826 /* TimelineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5926A578F600625826 /* TimelineRequest.swift */; };
+		EF8C9F5C26A5792300625826 /* TimelineResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5B26A5792300625826 /* TimelineResponse.swift */; };
+		EF8C9F5F26A5825D00625826 /* TimelineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5E26A5825D00625826 /* TimelineRepository.swift */; };
+		EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */; };
+		EF8C9F6526A5870600625826 /* JustAnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6426A5870600625826 /* JustAnyError.swift */; };
+		EF8C9F6726A5878A00625826 /* FailAnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6626A5878A00625826 /* FailAnyError.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* ViewController.swift */; };
@@ -66,6 +72,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF8C9F5926A578F600625826 /* TimelineRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRequest.swift; sourceTree = "<group>"; };
+		EF8C9F5B26A5792300625826 /* TimelineResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineResponse.swift; sourceTree = "<group>"; };
+		EF8C9F5E26A5825D00625826 /* TimelineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRepository.swift; sourceTree = "<group>"; };
+		EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRepositoryTests.swift; sourceTree = "<group>"; };
+		EF8C9F6426A5870600625826 /* JustAnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustAnyError.swift; sourceTree = "<group>"; };
+		EF8C9F6626A5878A00625826 /* FailAnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAnyError.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +150,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF8C9F5D26A5824600625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F5E26A5825D00625826 /* TimelineRepository.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F6026A5847A00625826 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EF8C9F6126A5848200625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F6826A5879300625826 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F6626A5878A00625826 /* FailAnyError.swift */,
+				EF8C9F6426A5870600625826 /* JustAnyError.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
 		EFA85FE626A16FE100993DDA = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +272,7 @@
 		EFA8602C26A1743900993DDA /* TestUtils */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F6826A5879300625826 /* Combine */,
 				EFA8602F26A174BF00993DDA /* Encodable+.swift */,
 				EFA8602D26A1746C00993DDA /* XCTestCase+.swift */,
 			);
@@ -416,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8606F26A31C2C00993DDA /* Login */,
+				EF8C9F5D26A5824600625826 /* Timeline */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -432,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8607326A31CE500993DDA /* LoginRequest.swift */,
+				EF8C9F5926A578F600625826 /* TimelineRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -440,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8607626A31F4200993DDA /* LoginResponse.swift */,
+				EF8C9F5B26A5792300625826 /* TimelineResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -455,7 +504,8 @@
 		EFA8608826A52C0400993DDA /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */,
+				EF8C9F6026A5847A00625826 /* Login */,
+				EF8C9F6126A5848200625826 /* Timeline */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -648,6 +698,7 @@
 				EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
+				EF8C9F5A26A578F600625826 /* TimelineRequest.swift in Sources */,
 				EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */,
 				EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
@@ -663,10 +714,12 @@
 				EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */,
 				EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
+				EF8C9F5F26A5825D00625826 /* TimelineRepository.swift in Sources */,
 				EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */,
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
 				EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */,
+				EF8C9F5C26A5792300625826 /* TimelineResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,11 +727,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */,
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
+				EF8C9F6526A5870600625826 /* JustAnyError.swift in Sources */,
 				EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
 				EFA8609126A533AC00993DDA /* LoginStoreTests.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
+				EF8C9F6726A5878A00625826 /* FailAnyError.swift in Sources */,
 				EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */,
 				EFA8608A26A52C1500993DDA /* LoginRepositoryTests.swift in Sources */,
 				EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */,

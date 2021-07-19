@@ -18,6 +18,8 @@ protocol APIClientProtocol {
 
 struct APIClient: APIClientProtocol {
     static let shared = APIClient(dependency: .init(jsonDecoder: defaultJSONDecoder, urlSession: URLSession.shared))
+    /// サーバーのURL. (今回は固定)
+    static let productionURL = "https://us-central1-android-technical-exam.cloudfunctions.net"
 
     // MARK: - Structs
 
@@ -45,6 +47,7 @@ struct APIClient: APIClientProtocol {
     // MARK: - Properties
 
     private let dependency: Dependency
+    private let baseURL: String
 
     static let defaultJSONDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -54,8 +57,9 @@ struct APIClient: APIClientProtocol {
 
     // MARK: - Lifecycle
 
-    init(dependency: Dependency) {
+    init(dependency: Dependency, baseURL: String = APIClient.productionURL) {
         self.dependency = dependency
+        self.baseURL = baseURL
     }
 
     // MARK: - Methods
@@ -67,9 +71,9 @@ struct APIClient: APIClientProtocol {
     /// - Returns: 成功した場合`Response`が流れる. 失敗した場合は`NetworkError`や`DecodingError`
     func send<Request, Response>(request: Request, retryAttemptCount: Int) -> AnyPublisher<Response, Error>
     where Request: APIRequest, Request.Response == Response {
-        os_log(.debug, log: OSLog.network, "[%s] %s", request.method.rawValue, request.url)
+        os_log(.debug, log: OSLog.network, "[%s] %s", request.method.rawValue, request.path)
 
-        guard let request = request.asURLRequest() else {
+        guard let request = request.asURLRequest(baseURL: baseURL) else {
             return Fail<Response, Error>(error: NetworkError.invalidRequest).eraseToAnyPublisher()
         }
 

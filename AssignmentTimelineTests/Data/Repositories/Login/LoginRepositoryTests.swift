@@ -22,9 +22,7 @@ final class LoginRepositoryTests: XCTestCase {
 
     func testLoginWithResponse() {
         let response = LoginResponse(accessToken: "hoge")
-        apiClientMock.publisher = Just(response)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
+        apiClientMock.publisher = justAnyError(response)
 
         waitForPublishing(
             response,
@@ -34,8 +32,7 @@ final class LoginRepositoryTests: XCTestCase {
 
     func testLoginWithUnauthorizedError() {
         let responseStatusCode = 401
-        apiClientMock.publisher = Fail<Any, Error>(error: APIClient.NetworkError.failed(statusCode: responseStatusCode, data: .init()))
-            .eraseToAnyPublisher()
+        apiClientMock.publisher = failAnyError(APIClient.NetworkError.failed(statusCode: responseStatusCode, data: .init()))
 
         waitForPublishingError(publisher: loginRepository.login(
             request: .init(requestBody: .init(mailAddress: "", password: ""))
@@ -46,8 +43,7 @@ final class LoginRepositoryTests: XCTestCase {
 
     func testLoginWithOtherError() {
         let responseStatusCode = 500
-        apiClientMock.publisher = Fail<Any, Error>(error: APIClient.NetworkError.failed(statusCode: responseStatusCode, data: .init()))
-            .eraseToAnyPublisher()
+        apiClientMock.publisher = failAnyError(APIClient.NetworkError.failed(statusCode: responseStatusCode, data: .init()))
 
         waitForPublishingError(publisher: loginRepository.login(
             request: .init(requestBody: .init(mailAddress: "", password: ""))
