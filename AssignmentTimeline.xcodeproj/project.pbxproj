@@ -45,6 +45,7 @@
 		EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608626A5285300993DDA /* EmptyAction.swift */; };
 		EFA8608A26A52C1500993DDA /* LoginRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */; };
 		EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608C26A52C7C00993DDA /* APIClientMock.swift */; };
+		EFA8609126A533AC00993DDA /* LoginStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8609026A533AC00993DDA /* LoginStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		EFA8608626A5285300993DDA /* EmptyAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAction.swift; sourceTree = "<group>"; };
 		EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryTests.swift; sourceTree = "<group>"; };
 		EFA8608C26A52C7C00993DDA /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		EFA8609026A533AC00993DDA /* LoginStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 		EFA8604026A2A4F200993DDA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8608E26A5339300993DDA /* Stores */,
 				EFA8604126A2A4FB00993DDA /* Validators */,
 			);
 			path = Domain;
@@ -463,6 +466,22 @@
 				EFA8608C26A52C7C00993DDA /* APIClientMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EFA8608E26A5339300993DDA /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8608F26A5339E00993DDA /* Login */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		EFA8608F26A5339E00993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8609026A533AC00993DDA /* LoginStoreTests.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -658,6 +677,7 @@
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
+				EFA8609126A533AC00993DDA /* LoginStoreTests.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
 				EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */,
 				EFA8608A26A52C1500993DDA /* LoginRepositoryTests.swift in Sources */,

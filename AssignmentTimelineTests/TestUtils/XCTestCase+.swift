@@ -40,7 +40,7 @@ extension XCTestCase {
     ///   - publisher: テスト対象の`AnyPublisher`
     ///   - timeout: タイムアウト値. デフォルトで1s
     ///   - condition: Publisherが返したerrorに対するテスト条件
-    func waitForPublishingError<V, E>(publisher: AnyPublisher<V, E>, timeout: TimeInterval = 1.0, condition: @escaping (Error) -> Bool) {
+    func waitForPublishingError<V, E>(publisher: AnyPublisher<V, E>, timeout: TimeInterval = 1.0, condition: @escaping (E) -> Bool) {
         let expectation = XCTestExpectation(description: "To fulfill a condition")
         var cancellables = Set<AnyCancellable>()
         publisher

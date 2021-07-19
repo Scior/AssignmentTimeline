@@ -32,7 +32,7 @@ final class LoginRepositoryTests: XCTestCase {
         )
     }
 
-    func testLoginWithError() {
+    func testLoginWithUnauthorizedError() {
         let responseStatusCode = 401
         apiClientMock.publisher = Fail<Any, Error>(error: APIClient.NetworkError.failed(statusCode: responseStatusCode, data: .init()))
             .eraseToAnyPublisher()
@@ -40,11 +40,19 @@ final class LoginRepositoryTests: XCTestCase {
         waitForPublishingError(publisher: loginRepository.login(
             request: .init(requestBody: .init(mailAddress: "", password: ""))
         )) { error in
-            if case let APIClient.NetworkError.failed(statusCode, _) = error {
-                return statusCode == responseStatusCode
-            } else {
-                return false
-            }
+            return error == .unauthorized
+        }
+    }
+
+    func testLoginWithOtherError() {
+        let responseStatusCode = 500
+        apiClientMock.publisher = Fail<Any, Error>(error: APIClient.NetworkError.failed(statusCode: responseStatusCode, data: .init()))
+            .eraseToAnyPublisher()
+
+        waitForPublishingError(publisher: loginRepository.login(
+            request: .init(requestBody: .init(mailAddress: "", password: ""))
+        )) { error in
+            return error == .others
         }
     }
 }
