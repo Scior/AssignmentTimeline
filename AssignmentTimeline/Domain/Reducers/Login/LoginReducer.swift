@@ -46,12 +46,12 @@ extension SharedReducers {
             return .none
         case let .loginResponse(.failure(error)):
             switch error {
-            case let APIClient.NetworkError.failed(statusCode: code, _) where code == 401:
+            case .unauthorized:
                 // 401の時だけパスワードを消しておく
                 state.password = ""
                 state.isValidPassword = false
                 state.alertState = .init(errorType: .incorrectInputs)
-            default:
+            case .others:
                 state.alertState = .init(errorType: .others)
             }
 
