@@ -35,6 +35,14 @@
 		EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */; };
 		EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */; };
 		EFA8606D26A3121A00993DDA /* LoginTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */; };
+		EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607026A31C6A00993DDA /* LoginRepository.swift */; };
+		EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607326A31CE500993DDA /* LoginRequest.swift */; };
+		EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607626A31F4200993DDA /* LoginResponse.swift */; };
+		EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8607A26A3B03700993DDA /* OSLog+network.swift */; };
+		EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608026A462FF00993DDA /* LoginAlertState.swift */; };
+		EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608226A5083700993DDA /* LoginAlertView.swift */; };
+		EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */; };
+		EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608626A5285300993DDA /* EmptyAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +96,14 @@
 		EFA8606826A30CD200993DDA /* LoginPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidator.swift; sourceTree = "<group>"; };
 		EFA8606A26A30E6000993DDA /* LoginPasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordValidatorTests.swift; sourceTree = "<group>"; };
 		EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextInputView.swift; sourceTree = "<group>"; };
+		EFA8607026A31C6A00993DDA /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		EFA8607326A31CE500993DDA /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		EFA8607626A31F4200993DDA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		EFA8607A26A3B03700993DDA /* OSLog+network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+network.swift"; sourceTree = "<group>"; };
+		EFA8608026A462FF00993DDA /* LoginAlertState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertState.swift; sourceTree = "<group>"; };
+		EFA8608226A5083700993DDA /* LoginAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertView.swift; sourceTree = "<group>"; };
+		EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyEnvironment.swift; sourceTree = "<group>"; };
+		EFA8608626A5285300993DDA /* EmptyAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +192,7 @@
 			children = (
 				EFA8602626A1727600993DDA /* Network */,
 				EFA8602326A170CA00993DDA /* Protocols */,
+				EFA8606E26A31C1100993DDA /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -191,6 +208,9 @@
 		EFA8602626A1727600993DDA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8607226A31CD400993DDA /* Requests */,
+				EFA8607526A31EB700993DDA /* Responses */,
+				EFA8607926A3B02500993DDA /* Utils */,
 				EFA8602726A172A600993DDA /* APIRequest.swift */,
 				EFA8602926A173F000993DDA /* APIClient.swift */,
 				EFA8603526A175FB00993DDA /* HTTPMethod.swift */,
@@ -308,6 +328,7 @@
 		EFA8604A26A2BF6000993DDA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8608226A5083700993DDA /* LoginAlertView.swift */,
 				EFA8606C26A3121A00993DDA /* LoginTextInputView.swift */,
 				EFA8604B26A2BF7500993DDA /* LoginView.swift */,
 			);
@@ -317,6 +338,7 @@
 		EFA8604D26A2F2A600993DDA /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8608626A5285300993DDA /* EmptyAction.swift */,
 				EFA8605426A2FCED00993DDA /* Login */,
 			);
 			path = Actions;
@@ -342,6 +364,7 @@
 		EFA8605126A2FCCF00993DDA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8608026A462FF00993DDA /* LoginAlertState.swift */,
 				EFA8605226A2FCDA00993DDA /* LoginState.swift */,
 			);
 			path = Login;
@@ -367,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8605B26A2FD7F00993DDA /* Login */,
+				EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -377,6 +401,46 @@
 				EFA8605C26A2FD9300993DDA /* LoginEnvironment.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA8606E26A31C1100993DDA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8606F26A31C2C00993DDA /* Login */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EFA8606F26A31C2C00993DDA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607026A31C6A00993DDA /* LoginRepository.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EFA8607226A31CD400993DDA /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607326A31CE500993DDA /* LoginRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		EFA8607526A31EB700993DDA /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607626A31F4200993DDA /* LoginResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		EFA8607926A3B02500993DDA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8607A26A3B03700993DDA /* OSLog+network.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,8 +601,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */,
+				EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */,
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
+				EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
+				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
+				EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */,
+				EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */,
 				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
 				EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */,
 				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
@@ -550,10 +620,12 @@
 				EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */,
 				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
 				EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */,
+				EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
 				EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */,
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
+				EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,10 @@
 //  Created by Fujino Suita on 2021/07/17.
 //
 
-enum LoginAction: Equatable {
-    case didEmailAddressChange(String)
-    case didPasswordChange(String)
+enum LoginAction {
+    case emailAddressChanged(String)
+    case passwordChanged(String)
+    case loginButtonTapped
+    case loginResponse(Result<LoginResponse, Error>)
+    case alert(EmptyAction) // 現状はalertからのactionはないので何もしない
 }

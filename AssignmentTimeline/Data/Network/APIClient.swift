@@ -5,17 +5,26 @@
 //  Created by Fujino Suita on 2021/07/16.
 //
 
+import os.log
 import Combine
 import Foundation
 
-struct APIClient {
+protocol APIClientProtocol {
+    func send<Request, Response>(request: Request) -> AnyPublisher<Response, Error>
+    where Request: APIRequest, Request.Response == Response
+    func send<Request, Response>(request: Request, retryAttemptCount: Int) -> AnyPublisher<Response, Error>
+    where Request: APIRequest, Request.Response == Response
+}
+
+struct APIClient: APIClientProtocol {
+
+    static let shared = APIClient(dependency: .init(jsonDecoder: defaultJSONDecoder, urlSession: URLSession.shared))
+
     // MARK: - Structs
 
     struct Dependency {
         let jsonDecoder: JSONDecoder
         let urlSession: URLSessionProtocol
-
-        static let `default`: Dependency = .init(jsonDecoder: APIClient.defaultJSONDecoder, urlSession: URLSession.shared)
     }
     enum NetworkError: LocalizedError {
         case invalidRequest
@@ -55,10 +64,21 @@ struct APIClient {
     /// `URLSession`を使ってリクエストを送り, `Response`にデコードする.
     /// - Parameters:
     ///   - request: リクエスト
-    ///   - retryAttemptCount: リトライの試行回数. デフォルトは1回
     /// - Returns: 成功した場合`Response`が流れる. 失敗した場合は`NetworkError`や`DecodingError`
-    func send<Request, Response>(request: Request, retryAttemptCount: Int = 1) -> AnyPublisher<Response, Error>
+    func send<Request, Response>(request: Request) -> AnyPublisher<Response, Error>
     where Request: APIRequest, Request.Response == Response {
+        return send(request: request, retryAttemptCount: 0)
+    }
+
+    /// `URLSession`を使ってリクエストを送り, `Response`にデコードする.
+    /// - Parameters:
+    ///   - request: リクエスト
+    ///   - retryAttemptCount: リトライの試行回数.
+    /// - Returns: 成功した場合`Response`が流れる. 失敗した場合は`NetworkError`や`DecodingError`
+    func send<Request, Response>(request: Request, retryAttemptCount: Int) -> AnyPublisher<Response, Error>
+    where Request: APIRequest, Request.Response == Response {
+        os_log(.debug, log: OSLog.network, "[%s] %s", request.method.rawValue, request.url)
+
         guard let request = request.asURLRequest() else {
             return Fail<Response, Error>(error: NetworkError.invalidRequest).eraseToAnyPublisher()
         }

@@ -16,33 +16,41 @@ struct LoginView: View {
             VStack(alignment: .center, spacing: 32) {
                 LoginTextInputView(
                     title: "メールアドレス",
+                    shouldMaskText: false,
                     binding: viewStore.binding(
                         get: \.emailAddress,
-                        send: LoginAction.didEmailAddressChange
+                        send: LoginAction.emailAddressChanged
                     )
                 )
                 LoginTextInputView(
                     title: "パスワード",
+                    shouldMaskText: true,
                     binding: viewStore.binding(
                         get: \.password,
-                        send: LoginAction.didPasswordChange
+                        send: LoginAction.passwordChanged
                     )
                 )
-                Button {
-                    print("hoge") // FIXME:
-                } label: {
-                    Text("ログイン")
-                        .font(.body)
-                        .bold()
-                        .foregroundColor(viewStore.buttonColor)
-                        .padding(.horizontal, 48)
-                        .padding(.vertical, 8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(viewStore.buttonColor, lineWidth: 2)
-                        )
+                VStack(alignment: .center, spacing: 16) {
+                    LoginAlertView(store: self.store.scope(
+                        state: \.alertState,
+                        action: LoginAction.alert
+                    ))
+                    Button {
+                        viewStore.send(.loginButtonTapped)
+                    } label: {
+                        Text("ログイン")
+                            .font(.body)
+                            .bold()
+                            .foregroundColor(viewStore.buttonColor)
+                            .padding(.horizontal, 48)
+                            .padding(.vertical, 8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .stroke(viewStore.buttonColor, lineWidth: 2)
+                            )
+                    }
+                    .disabled(!viewStore.hasValidInputs)
                 }
-                .disabled(!viewStore.hasValidInputs)
             }.padding(.horizontal, 24)
         }
     }
@@ -55,7 +63,11 @@ struct LoginView_Previews: PreviewProvider {
             reducer: SharedReducers.login,
             environment: LoginEnvironment(
                 emailAddressValidator: EmailAddressValidator(),
-                loginPasswordValidator: LoginPasswordValidator()
+                loginPasswordValidator: LoginPasswordValidator(),
+                repository: LoginRepository(dependency: .init(
+                    client: APIClient.shared
+                )),
+                mainQueue: .main
             )
         ))
     }
