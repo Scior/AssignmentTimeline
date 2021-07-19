@@ -43,6 +43,8 @@
 		EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608226A5083700993DDA /* LoginAlertView.swift */; };
 		EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */; };
 		EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608626A5285300993DDA /* EmptyAction.swift */; };
+		EFA8608A26A52C1500993DDA /* LoginRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */; };
+		EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8608C26A52C7C00993DDA /* APIClientMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		EFA8608226A5083700993DDA /* LoginAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertView.swift; sourceTree = "<group>"; };
 		EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyEnvironment.swift; sourceTree = "<group>"; };
 		EFA8608626A5285300993DDA /* EmptyAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAction.swift; sourceTree = "<group>"; };
+		EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryTests.swift; sourceTree = "<group>"; };
+		EFA8608C26A52C7C00993DDA /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +234,9 @@
 		EFA8603126A174EF00993DDA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EFA8608B26A52C6F00993DDA /* Mocks */,
 				EFA8603226A1750100993DDA /* Network */,
+				EFA8608826A52C0400993DDA /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -443,6 +449,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		EFA8608826A52C0400993DDA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EFA8608B26A52C6F00993DDA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8608C26A52C7C00993DDA /* APIClientMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -634,9 +656,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
+				EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
 				EFA8606B26A30E6000993DDA /* LoginPasswordValidatorTests.swift in Sources */,
+				EFA8608A26A52C1500993DDA /* LoginRepositoryTests.swift in Sources */,
 				EFA8604326A2A51D00993DDA /* EmailAddressValidatorTests.swift in Sources */,
 				EFA8603426A1750D00993DDA /* APIClientTests.swift in Sources */,
 			);
