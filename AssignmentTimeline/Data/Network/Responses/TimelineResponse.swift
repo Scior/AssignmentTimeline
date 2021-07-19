@@ -9,7 +9,7 @@ import Foundation
 
 typealias TimelineResponse = [TimelineItem]
 
-struct TimelineItem: Decodable {
+struct TimelineItem: Decodable, Equatable {
     enum CellType: String, Decodable {
         case bigImage = "BIG_IMAGE"
         case smallImage = "SMALL_IMAGE"
@@ -27,12 +27,12 @@ struct TimelineItem: Decodable {
 
 }
 
-struct Comment: Decodable {
+struct Comment: Decodable, Equatable {
     let comment: String
     let user: User
 }
 
-struct User: Decodable {
+struct User: Decodable, Equatable {
     let id: Int
     let name: String
     let image: String

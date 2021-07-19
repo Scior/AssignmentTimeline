@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EF8C9F5A26A578F600625826 /* TimelineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5926A578F600625826 /* TimelineRequest.swift */; };
 		EF8C9F5C26A5792300625826 /* TimelineResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5B26A5792300625826 /* TimelineResponse.swift */; };
+		EF8C9F5F26A5825D00625826 /* TimelineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F5E26A5825D00625826 /* TimelineRepository.swift */; };
+		EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* ViewController.swift */; };
@@ -70,6 +72,8 @@
 /* Begin PBXFileReference section */
 		EF8C9F5926A578F600625826 /* TimelineRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRequest.swift; sourceTree = "<group>"; };
 		EF8C9F5B26A5792300625826 /* TimelineResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineResponse.swift; sourceTree = "<group>"; };
+		EF8C9F5E26A5825D00625826 /* TimelineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRepository.swift; sourceTree = "<group>"; };
+		EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRepositoryTests.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF8C9F5D26A5824600625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F5E26A5825D00625826 /* TimelineRepository.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F6026A5847A00625826 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EF8C9F6126A5848200625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
 		EFA85FE626A16FE100993DDA = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8606F26A31C2C00993DDA /* Login */,
+				EF8C9F5D26A5824600625826 /* Timeline */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -461,7 +490,8 @@
 		EFA8608826A52C0400993DDA /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				EFA8608926A52C1500993DDA /* LoginRepositoryTests.swift */,
+				EF8C9F6026A5847A00625826 /* Login */,
+				EF8C9F6126A5848200625826 /* Timeline */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -670,6 +700,7 @@
 				EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */,
 				EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
+				EF8C9F5F26A5825D00625826 /* TimelineRepository.swift in Sources */,
 				EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */,
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
@@ -682,6 +713,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */,
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,

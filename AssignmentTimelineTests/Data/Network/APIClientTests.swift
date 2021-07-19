@@ -16,7 +16,7 @@ final class APIClientTests: XCTestCase {
 
     override func setUp() {
         urlSession = URLSessionMock()
-        client = APIClient(dependency: .init(jsonDecoder: APIClient.defaultJSONDecoder, urlSession: urlSession))
+        client = APIClient(dependency: .init(jsonDecoder: APIClient.defaultJSONDecoder, urlSession: urlSession), baseURL: "")
     }
 
     // MARK: - Test cases
@@ -85,12 +85,12 @@ extension APIClientTests {
     }
     struct TestRequest: APIRequest {
         typealias Response = TestResponse
-        let url = Const.dummyURL.absoluteString
+        let path = Const.dummyURL.absoluteString
         let method: HTTPMethod = .get
     }
     struct InvalidRequest: APIRequest {
         typealias Response = TestResponse
-        let url = "//::::/:/:/"
+        let path = "//::::/:/:/"
         let method: HTTPMethod = .get
     }
     struct TestResponse: Codable, Equatable {
