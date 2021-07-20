@@ -29,6 +29,12 @@
 		EF8C9F9026A6F48D00625826 /* TimelineBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */; };
 		EF8C9F9626A6FE8B00625826 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EF8C9F9526A6FE8B00625826 /* KeychainAccess */; };
 		EF8C9F9826A6FEB400625826 /* AccessTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */; };
+		EF8C9F9A26A7044000625826 /* TimelineViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9926A7044000625826 /* TimelineViewControllerRepresentable.swift */; };
+		EF8C9F9C26A7098200625826 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9B26A7098200625826 /* AppState.swift */; };
+		EF8C9F9E26A709B900625826 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9D26A709B900625826 /* AppAction.swift */; };
+		EF8C9FA026A709FA00625826 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9F26A709FA00625826 /* AppReducer.swift */; };
+		EF8C9FA226A70B2600625826 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA126A70B2600625826 /* AppEnvironment.swift */; };
+		EF8C9FA426A70CA100625826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA326A70CA100625826 /* RootView.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* TimelineViewController.swift */; };
@@ -108,6 +114,12 @@
 		EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+filled.swift"; sourceTree = "<group>"; };
 		EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineBannerCell.swift; sourceTree = "<group>"; };
 		EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRepository.swift; sourceTree = "<group>"; };
+		EF8C9F9926A7044000625826 /* TimelineViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		EF8C9F9B26A7098200625826 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EF8C9F9D26A709B900625826 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		EF8C9F9F26A709FA00625826 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		EF8C9FA126A70B2600625826 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		EF8C9FA326A70CA100625826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA85FF626A16FE100993DDA /* TimelineViewController.swift */,
+				EF8C9F9926A7044000625826 /* TimelineViewControllerRepresentable.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -487,6 +500,7 @@
 		EFA8604926A2BF5800993DDA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA326A70CA100625826 /* RootView.swift */,
 				EFA8604A26A2BF6000993DDA /* Login */,
 				EF8C9F6926A59D0A00625826 /* Timeline */,
 			);
@@ -506,6 +520,7 @@
 		EFA8604D26A2F2A600993DDA /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9D26A709B900625826 /* AppAction.swift */,
 				EFA8608626A5285300993DDA /* EmptyAction.swift */,
 				EFA8605426A2FCED00993DDA /* Login */,
 				EF8C9F7226A5A5B200625826 /* Timeline */,
@@ -516,6 +531,7 @@
 		EFA8604E26A2F2DA00993DDA /* State */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9B26A7098200625826 /* AppState.swift */,
 				EFA8605126A2FCCF00993DDA /* Login */,
 				EF8C9F6C26A5A4E400625826 /* Timeline */,
 			);
@@ -525,6 +541,7 @@
 		EFA8604F26A2F2E800993DDA /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9F26A709FA00625826 /* AppReducer.swift */,
 				EFA8605E26A2FF2D00993DDA /* SharedReducers.swift */,
 				EFA8605726A2FD1800993DDA /* Login */,
 				EF8C9F6F26A5A55100625826 /* Timeline */,
@@ -560,9 +577,10 @@
 		EFA8605A26A2FD7400993DDA /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA126A70B2600625826 /* AppEnvironment.swift */,
+				EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */,
 				EFA8605B26A2FD7F00993DDA /* Login */,
 				EF8C9F7526A5A61100625826 /* Timeline */,
-				EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -818,13 +836,16 @@
 				EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */,
 				EF8C9F6E26A5A4F500625826 /* TimelineState.swift in Sources */,
 				EF8C9F9826A6FEB400625826 /* AccessTokenRepository.swift in Sources */,
+				EF8C9FA026A709FA00625826 /* AppReducer.swift in Sources */,
 				EF8C9F6B26A59D6600625826 /* TimelineBigImageCell.swift in Sources */,
 				EF8C9F7426A5A5BE00625826 /* TimelineAction.swift in Sources */,
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
+				EF8C9FA426A70CA100625826 /* RootView.swift in Sources */,
 				EF8C9F9026A6F48D00625826 /* TimelineBannerCell.swift in Sources */,
 				EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EF8C9F7F26A65B6E00625826 /* ReusableCell.swift in Sources */,
+				EF8C9F9A26A7044000625826 /* TimelineViewControllerRepresentable.swift in Sources */,
 				EF8C9F8426A65DAB00625826 /* TimelinePickUsersView.swift in Sources */,
 				EF8C9F8826A6643400625826 /* TimelineUserImageView.swift in Sources */,
 				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
@@ -835,6 +856,7 @@
 				EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */,
 				EF8C9F8226A65D3C00625826 /* TimelineSmallImageCell.swift in Sources */,
 				EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */,
+				EF8C9F9E26A709B900625826 /* AppAction.swift in Sources */,
 				EF8C9F8D26A68A5000625826 /* UIImage+filled.swift in Sources */,
 				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
 				EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */,
@@ -846,12 +868,14 @@
 				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
 				EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */,
 				EF8C9F7C26A5DC4000625826 /* UIView+addCornerRadius.swift in Sources */,
+				EF8C9FA226A70B2600625826 /* AppEnvironment.swift in Sources */,
 				EF8C9F7926A5DB7500625826 /* TimelineCommentUserView.swift in Sources */,
 				EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
 				EF8C9F5F26A5825D00625826 /* TimelineRepository.swift in Sources */,
 				EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */,
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
+				EF8C9F9C26A7098200625826 /* AppState.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
 				EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */,
 				EF8C9F7726A5A62200625826 /* TimelineEnvironment.swift in Sources */,

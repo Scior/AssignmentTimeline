@@ -15,15 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         self.window = (scene as? UIWindowScene).map(UIWindow.init(windowScene:))
         self.window?.rootViewController = UIHostingController(
-            rootView: LoginView(store: .init(
-                initialState: .empty,
-                reducer: SharedReducers.login,
-                environment: LoginEnvironment(
-                    emailAddressValidator: EmailAddressValidator(),
-                    loginPasswordValidator: LoginPasswordValidator(),
-                    repository: LoginRepository(dependency: .init(
-                        client: APIClient.shared
-                    )),
+            rootView: RootView(store: .init(
+                initialState: .login(.empty),
+                reducer: SharedReducers.app,
+                environment: AppEnvironment(
+                    apiClient: APIClient.shared,
                     mainQueue: .main
                 )
             ))
