@@ -27,6 +27,16 @@
 		EF8C9F8B26A6875800625826 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EF8C9F8A26A6875800625826 /* SDWebImage */; };
 		EF8C9F8D26A68A5000625826 /* UIImage+filled.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */; };
 		EF8C9F9026A6F48D00625826 /* TimelineBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */; };
+		EF8C9F9626A6FE8B00625826 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EF8C9F9526A6FE8B00625826 /* KeychainAccess */; };
+		EF8C9F9826A6FEB400625826 /* AccessTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */; };
+		EF8C9F9A26A7044000625826 /* TimelineViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9926A7044000625826 /* TimelineViewControllerRepresentable.swift */; };
+		EF8C9F9C26A7098200625826 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9B26A7098200625826 /* AppState.swift */; };
+		EF8C9F9E26A709B900625826 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9D26A709B900625826 /* AppAction.swift */; };
+		EF8C9FA026A709FA00625826 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9F26A709FA00625826 /* AppReducer.swift */; };
+		EF8C9FA226A70B2600625826 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA126A70B2600625826 /* AppEnvironment.swift */; };
+		EF8C9FA426A70CA100625826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA326A70CA100625826 /* RootView.swift */; };
+		EF8C9FA626A7166300625826 /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA526A7166300625826 /* AppStoreTests.swift */; };
+		EF8C9FA826A7176000625826 /* AccessTokenRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* TimelineViewController.swift */; };
@@ -105,6 +115,15 @@
 		EF8C9F8726A6643400625826 /* TimelineUserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineUserImageView.swift; sourceTree = "<group>"; };
 		EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+filled.swift"; sourceTree = "<group>"; };
 		EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineBannerCell.swift; sourceTree = "<group>"; };
+		EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRepository.swift; sourceTree = "<group>"; };
+		EF8C9F9926A7044000625826 /* TimelineViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		EF8C9F9B26A7098200625826 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EF8C9F9D26A709B900625826 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		EF8C9F9F26A709FA00625826 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		EF8C9FA126A70B2600625826 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		EF8C9FA326A70CA100625826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		EF8C9FA526A7166300625826 /* AppStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTests.swift; sourceTree = "<group>"; };
+		EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRepositoryMock.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +177,7 @@
 			files = (
 				EF8C9F8B26A6875800625826 /* SDWebImage in Frameworks */,
 				EFA8606526A3027400993DDA /* ComposableArchitecture in Frameworks */,
+				EF8C9F9626A6FE8B00625826 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA85FF626A16FE100993DDA /* TimelineViewController.swift */,
+				EF8C9F9926A7044000625826 /* TimelineViewControllerRepresentable.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -483,6 +504,7 @@
 		EFA8604926A2BF5800993DDA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA326A70CA100625826 /* RootView.swift */,
 				EFA8604A26A2BF6000993DDA /* Login */,
 				EF8C9F6926A59D0A00625826 /* Timeline */,
 			);
@@ -502,6 +524,7 @@
 		EFA8604D26A2F2A600993DDA /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9D26A709B900625826 /* AppAction.swift */,
 				EFA8608626A5285300993DDA /* EmptyAction.swift */,
 				EFA8605426A2FCED00993DDA /* Login */,
 				EF8C9F7226A5A5B200625826 /* Timeline */,
@@ -512,6 +535,7 @@
 		EFA8604E26A2F2DA00993DDA /* State */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9B26A7098200625826 /* AppState.swift */,
 				EFA8605126A2FCCF00993DDA /* Login */,
 				EF8C9F6C26A5A4E400625826 /* Timeline */,
 			);
@@ -521,6 +545,7 @@
 		EFA8604F26A2F2E800993DDA /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9F26A709FA00625826 /* AppReducer.swift */,
 				EFA8605E26A2FF2D00993DDA /* SharedReducers.swift */,
 				EFA8605726A2FD1800993DDA /* Login */,
 				EF8C9F6F26A5A55100625826 /* Timeline */,
@@ -556,9 +581,10 @@
 		EFA8605A26A2FD7400993DDA /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA126A70B2600625826 /* AppEnvironment.swift */,
+				EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */,
 				EFA8605B26A2FD7F00993DDA /* Login */,
 				EF8C9F7526A5A61100625826 /* Timeline */,
-				EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -574,6 +600,7 @@
 		EFA8606E26A31C1100993DDA /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */,
 				EFA8606F26A31C2C00993DDA /* Login */,
 				EF8C9F5D26A5824600625826 /* Timeline */,
 			);
@@ -626,6 +653,7 @@
 		EFA8608B26A52C6F00993DDA /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */,
 				EFA8608C26A52C7C00993DDA /* APIClientMock.swift */,
 			);
 			path = Mocks;
@@ -634,6 +662,7 @@
 		EFA8608E26A5339300993DDA /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA526A7166300625826 /* AppStoreTests.swift */,
 				EFA8608F26A5339E00993DDA /* Login */,
 			);
 			path = Stores;
@@ -667,6 +696,7 @@
 			packageProductDependencies = (
 				EFA8604726A2B49900993DDA /* ComposableArchitecture */,
 				EF8C9F8A26A6875800625826 /* SDWebImage */,
+				EF8C9F9526A6FE8B00625826 /* KeychainAccess */,
 			);
 			productName = AssignmentTimeline;
 			productReference = EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */;
@@ -742,6 +772,7 @@
 			packageReferences = (
 				EFA8604626A2B49900993DDA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				EF8C9F8926A6875800625826 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				EF8C9F9426A6FE8B00625826 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = EFA85FF026A16FE100993DDA /* Products */;
 			projectDirPath = "";
@@ -810,13 +841,17 @@
 				EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */,
 				EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */,
 				EF8C9F6E26A5A4F500625826 /* TimelineState.swift in Sources */,
+				EF8C9F9826A6FEB400625826 /* AccessTokenRepository.swift in Sources */,
+				EF8C9FA026A709FA00625826 /* AppReducer.swift in Sources */,
 				EF8C9F6B26A59D6600625826 /* TimelineBigImageCell.swift in Sources */,
 				EF8C9F7426A5A5BE00625826 /* TimelineAction.swift in Sources */,
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
+				EF8C9FA426A70CA100625826 /* RootView.swift in Sources */,
 				EF8C9F9026A6F48D00625826 /* TimelineBannerCell.swift in Sources */,
 				EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
 				EF8C9F7F26A65B6E00625826 /* ReusableCell.swift in Sources */,
+				EF8C9F9A26A7044000625826 /* TimelineViewControllerRepresentable.swift in Sources */,
 				EF8C9F8426A65DAB00625826 /* TimelinePickUsersView.swift in Sources */,
 				EF8C9F8826A6643400625826 /* TimelineUserImageView.swift in Sources */,
 				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
@@ -827,6 +862,7 @@
 				EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */,
 				EF8C9F8226A65D3C00625826 /* TimelineSmallImageCell.swift in Sources */,
 				EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */,
+				EF8C9F9E26A709B900625826 /* AppAction.swift in Sources */,
 				EF8C9F8D26A68A5000625826 /* UIImage+filled.swift in Sources */,
 				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
 				EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */,
@@ -838,12 +874,14 @@
 				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
 				EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */,
 				EF8C9F7C26A5DC4000625826 /* UIView+addCornerRadius.swift in Sources */,
+				EF8C9FA226A70B2600625826 /* AppEnvironment.swift in Sources */,
 				EF8C9F7926A5DB7500625826 /* TimelineCommentUserView.swift in Sources */,
 				EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
 				EF8C9F5F26A5825D00625826 /* TimelineRepository.swift in Sources */,
 				EFA8604C26A2BF7500993DDA /* LoginView.swift in Sources */,
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
+				EF8C9F9C26A7098200625826 /* AppState.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
 				EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */,
 				EF8C9F7726A5A62200625826 /* TimelineEnvironment.swift in Sources */,
@@ -856,10 +894,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */,
+				EF8C9FA826A7176000625826 /* AccessTokenRepositoryMock.swift in Sources */,
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EF8C9F6526A5870600625826 /* JustAnyError.swift in Sources */,
 				EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
+				EF8C9FA626A7166300625826 /* AppStoreTests.swift in Sources */,
 				EFA8609126A533AC00993DDA /* LoginStoreTests.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
 				EF8C9F6726A5878A00625826 /* FailAnyError.swift in Sources */,
@@ -1203,6 +1243,14 @@
 				minimumVersion = 5.11.1;
 			};
 		};
+		EF8C9F9426A6FE8B00625826 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
 		EFA8604626A2B49900993DDA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -1218,6 +1266,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EF8C9F8926A6875800625826 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		EF8C9F9526A6FE8B00625826 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF8C9F9426A6FE8B00625826 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		EFA8604726A2B49900993DDA /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

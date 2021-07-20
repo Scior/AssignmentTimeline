@@ -14,12 +14,14 @@ final class LoginStoreTests: XCTestCase {
     private var emailAddressValidatorMock: EmailAddressValidatorMock!
     private var loginPasswordValidatorMock: LoginPasswordValidatorMock!
     private var loginRepositoryMock: LoginRepositoryMock!
+    private var accessTokenRepositoryMock: AccessTokenRepositoryMock!
     private var testStore: TestStore<LoginState, LoginState, LoginAction, LoginAction, LoginEnvironment>!
 
     override func setUp() {
         emailAddressValidatorMock = .init()
         loginPasswordValidatorMock = .init()
         loginRepositoryMock = .init()
+        accessTokenRepositoryMock = .init()
         resetTestStore(initialState: .empty)
     }
 
@@ -30,7 +32,8 @@ final class LoginStoreTests: XCTestCase {
             environment: .init(
                 emailAddressValidator: emailAddressValidatorMock,
                 loginPasswordValidator: loginPasswordValidatorMock,
-                repository: loginRepositoryMock,
+                loginRepository: loginRepositoryMock,
+                accessTokenRepository: accessTokenRepositoryMock,
                 mainQueue: .immediate
             )
         )
@@ -105,6 +108,7 @@ final class LoginStoreTests: XCTestCase {
             $0.isValidEmailAddress = false
             $0.isValidPassword = true
             $0.alertState.errorType = nil
+            $0.accessToken = "token"
         }
     }
 }

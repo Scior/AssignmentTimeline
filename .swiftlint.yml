@@ -47,6 +47,9 @@ opt_in_rules:
   - vertical_parameter_alignment_on_call
   - xct_specific_matcher
 
+identifier_name:
+  min_length: 1
+
 included:
   - AssignmentTimeline
 

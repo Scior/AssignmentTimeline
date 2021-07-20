@@ -19,11 +19,15 @@ extension SharedReducers {
             let pageIndex = state.lastPageIndex + 1
             state.fetchingPageIndex = pageIndex
 
-            return environment.repository
-                .getTimeline(request: .init(accessToken: "", page: pageIndex)) // FIXME:
-                .receive(on: environment.mainQueue)
-                .catchToEffect()
-                .map(TimelineAction.timelineResponse)
+            if let accessToken = environment.accessTokenRepository.get() {
+                return environment.timelineRepository
+                    .getTimeline(request: .init(accessToken: accessToken, page: pageIndex))
+                    .receive(on: environment.mainQueue)
+                    .catchToEffect()
+                    .map(TimelineAction.timelineResponse)
+            } else {
+                return .none
+            }
         case let .hasReadItem(index):
             state.lastReadIndex = max(state.lastReadIndex, index)
             // 終わりに近づいたときに次を読む
