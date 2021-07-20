@@ -5,13 +5,15 @@
 //  Created by Fujino Suita on 2021/07/16.
 //
 
+import SDWebImage
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        SDImageCache.shared.config.maxMemoryCost = 200 * 1024 * 1024
+
         return true
     }
 
