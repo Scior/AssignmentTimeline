@@ -18,6 +18,8 @@ struct AccessTokenRepository: AccessTokenRepositoryProtocol {
         static let service = "com.flyingalpaca.AssignmentTimeline"
         static let key = "access_token"
     }
+
+    static let shared = AccessTokenRepository()
     private let keychain = Keychain(service: Const.service)
 
     func save(token: String) {
