@@ -11,6 +11,7 @@ import typealias ComposableArchitecture.AnySchedulerOf
 struct LoginEnvironment {
     let emailAddressValidator: EmailAddressValidatorProtocol
     let loginPasswordValidator: LoginPasswordValidatorProtocol
-    let repository: LoginRepositoryProtocol
+    let loginRepository: LoginRepositoryProtocol
+    let accessTokenRepository: AccessTokenRepositoryProtocol
     let mainQueue: AnySchedulerOf<DispatchQueue>
 }

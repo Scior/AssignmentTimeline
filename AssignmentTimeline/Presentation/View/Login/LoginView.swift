@@ -64,7 +64,7 @@ struct LoginView_Previews: PreviewProvider {
             environment: LoginEnvironment(
                 emailAddressValidator: EmailAddressValidator(),
                 loginPasswordValidator: LoginPasswordValidator(),
-                repository: LoginRepository(dependency: .init(
+                loginRepository: LoginRepository(dependency: .init(
                     client: APIClient.shared
                 )),
                 mainQueue: .main

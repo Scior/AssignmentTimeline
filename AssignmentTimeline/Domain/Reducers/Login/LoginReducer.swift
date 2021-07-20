@@ -35,13 +35,14 @@ extension SharedReducers {
         case .loginButtonTapped:
             let request = LoginRequest(requestBody: .init(mailAddress: state.emailAddress, password: state.password))
 
-            return environment.repository
+            return environment.loginRepository
                 .login(request: request)
                 .receive(on: environment.mainQueue)
                 .catchToEffect()
                 .map(LoginAction.loginResponse)
         case let .loginResponse(.success(response)):
             state.alertState.errorType = nil
+            environment.accessTokenRepository.save(token: response.accessToken)
 
             return .none
         case let .loginResponse(.failure(error)):
