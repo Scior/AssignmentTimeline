@@ -27,6 +27,8 @@
 		EF8C9F8B26A6875800625826 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EF8C9F8A26A6875800625826 /* SDWebImage */; };
 		EF8C9F8D26A68A5000625826 /* UIImage+filled.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */; };
 		EF8C9F9026A6F48D00625826 /* TimelineBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */; };
+		EF8C9F9626A6FE8B00625826 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EF8C9F9526A6FE8B00625826 /* KeychainAccess */; };
+		EF8C9F9826A6FEB400625826 /* AccessTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* TimelineViewController.swift */; };
@@ -105,6 +107,7 @@
 		EF8C9F8726A6643400625826 /* TimelineUserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineUserImageView.swift; sourceTree = "<group>"; };
 		EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+filled.swift"; sourceTree = "<group>"; };
 		EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineBannerCell.swift; sourceTree = "<group>"; };
+		EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRepository.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 			files = (
 				EF8C9F8B26A6875800625826 /* SDWebImage in Frameworks */,
 				EFA8606526A3027400993DDA /* ComposableArchitecture in Frameworks */,
+				EF8C9F9626A6FE8B00625826 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +578,7 @@
 		EFA8606E26A31C1100993DDA /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F9726A6FEB400625826 /* AccessTokenRepository.swift */,
 				EFA8606F26A31C2C00993DDA /* Login */,
 				EF8C9F5D26A5824600625826 /* Timeline */,
 			);
@@ -667,6 +672,7 @@
 			packageProductDependencies = (
 				EFA8604726A2B49900993DDA /* ComposableArchitecture */,
 				EF8C9F8A26A6875800625826 /* SDWebImage */,
+				EF8C9F9526A6FE8B00625826 /* KeychainAccess */,
 			);
 			productName = AssignmentTimeline;
 			productReference = EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */;
@@ -742,6 +748,7 @@
 			packageReferences = (
 				EFA8604626A2B49900993DDA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				EF8C9F8926A6875800625826 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				EF8C9F9426A6FE8B00625826 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = EFA85FF026A16FE100993DDA /* Products */;
 			projectDirPath = "";
@@ -810,6 +817,7 @@
 				EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */,
 				EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */,
 				EF8C9F6E26A5A4F500625826 /* TimelineState.swift in Sources */,
+				EF8C9F9826A6FEB400625826 /* AccessTokenRepository.swift in Sources */,
 				EF8C9F6B26A59D6600625826 /* TimelineBigImageCell.swift in Sources */,
 				EF8C9F7426A5A5BE00625826 /* TimelineAction.swift in Sources */,
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
@@ -1203,6 +1211,14 @@
 				minimumVersion = 5.11.1;
 			};
 		};
+		EF8C9F9426A6FE8B00625826 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
 		EFA8604626A2B49900993DDA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -1218,6 +1234,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EF8C9F8926A6875800625826 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		EF8C9F9526A6FE8B00625826 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF8C9F9426A6FE8B00625826 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		EFA8604726A2B49900993DDA /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
