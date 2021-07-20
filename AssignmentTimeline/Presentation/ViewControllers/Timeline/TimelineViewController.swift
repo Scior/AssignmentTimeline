@@ -16,6 +16,7 @@ final class TimelineViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.register(type: TimelineBigImageCell.self)
         collectionView.register(type: TimelineSmallImageCell.self)
+        collectionView.register(type: TimelineBannerCell.self)
 
         return collectionView
     }()
@@ -85,8 +86,10 @@ extension TimelineViewController: UICollectionViewDelegateFlowLayout {
         switch viewStore.items[indexPath.row].type {
         case .bigImage:
             height = TimelineBigImageCell.Const.height
-        default:
+        case .smallImage:
             height = TimelineSmallImageCell.Const.height
+        case .banner:
+            height = TimelineBannerCell.Const.height
         }
 
         return .init(width: UIScreen.main.bounds.width - 16, height: height)
@@ -122,8 +125,12 @@ extension TimelineViewController: UICollectionViewDataSource {
             cell = collectionView.dequeue(type: TimelineBigImageCell.self, for: indexPath) { cell in
                 cell.setup(item: item)
             }
-        default:
+        case .smallImage:
             cell = collectionView.dequeue(type: TimelineSmallImageCell.self, for: indexPath) { cell in
+                cell.setup(item: item)
+            }
+        case .banner:
+            cell = collectionView.dequeue(type: TimelineBannerCell.self, for: indexPath) { cell in
                 cell.setup(item: item)
             }
         }
