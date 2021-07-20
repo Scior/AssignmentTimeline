@@ -119,6 +119,7 @@ final class TimelineSmallImageCell: UICollectionViewCell, ReusableCell {
         if let title = item.title {
             let style = NSMutableParagraphStyle()
             style.lineSpacing = 4
+            style.lineBreakMode = .byTruncatingTail
             titleLabel.attributedText = NSAttributedString(string: title, attributes: [.paragraphStyle: style])
         }
 
