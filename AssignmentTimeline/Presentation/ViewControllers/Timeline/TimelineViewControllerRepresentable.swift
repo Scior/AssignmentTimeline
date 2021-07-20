@@ -5,19 +5,18 @@
 //  Created by Fujino Suita on 2021/07/20.
 //
 
+import class ComposableArchitecture.Store
 import SwiftUI
 
 struct TimelineViewControllerRepresentable: UIViewControllerRepresentable {
+    private let store: Store<TimelineState, TimelineAction>
+
+    init(store: Store<TimelineState, TimelineAction>) {
+        self.store = store
+    }
+
     func makeUIViewController(context: Context) -> TimelineViewController {
-        return .init(store: .init(
-            initialState: .empty,
-            reducer: SharedReducers.timeline,
-            environment: TimelineEnvironment(
-                timelineRepository: TimelineRepository(dependency: .init(client: APIClient.shared)),
-                accessTokenRepository: AccessTokenRepository(),
-                mainQueue: .main
-            )
-        ))
+        return .init(store: store)
     }
 
     func updateUIViewController(_ uiViewController: TimelineViewController, context: Context) {}

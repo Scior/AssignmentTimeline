@@ -16,8 +16,8 @@ struct RootView: View {
             CaseLet(state: /AppState.login, action: AppAction.login) { store in
                 LoginView(store: store)
             }
-            CaseLet(state: /AppState.timeline, action: AppAction.timeline) { _ in
-                TimelineViewControllerRepresentable() // FIXME: inject store
+            CaseLet(state: /AppState.timeline, action: AppAction.timeline) { store in
+                TimelineViewControllerRepresentable(store: store)
             }
         }
     }
