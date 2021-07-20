@@ -70,6 +70,11 @@ final class TimelineViewController: UIViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension TimelineViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        assert(indexPath.section == 0, "Section must be 0")
+        viewStore.send(.hasReadItem(index: indexPath.row))
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard indexPath.section == 0, viewStore.items.indices.contains(indexPath.row) else {
             assertionFailure("indexPath is out of range")

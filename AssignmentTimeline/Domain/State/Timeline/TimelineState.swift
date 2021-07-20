@@ -8,7 +8,15 @@
 struct TimelineState: Equatable {
     var items: [TimelineItem]
     var lastPageIndex: Int
+    var lastReadIndex: Int
+    var hasNext: Bool
     var fetchingPageIndex: Int?
 
-    static let empty = TimelineState(items: [], lastPageIndex: 0, fetchingPageIndex: nil)
+    static let empty = TimelineState(
+        items: [],
+        lastPageIndex: 0,
+        lastReadIndex: 0,
+        hasNext: true,
+        fetchingPageIndex: nil
+    )
 }

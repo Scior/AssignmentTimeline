@@ -11,7 +11,7 @@ extension SharedReducers {
     static let timeline = Reducer<TimelineState, TimelineAction, TimelineEnvironment> { state, action, environment in
         switch action {
         case .fetchNextPage:
-            guard state.fetchingPageIndex == nil else {
+            guard state.fetchingPageIndex == nil, state.hasNext else {
                 // すでに取得中だったらリクエストは送らない
                 return .none
             }
@@ -24,6 +24,14 @@ extension SharedReducers {
                 .receive(on: environment.mainQueue)
                 .catchToEffect()
                 .map(TimelineAction.timelineResponse)
+        case let .hasReadItem(index):
+            state.lastReadIndex = max(state.lastReadIndex, index)
+            // 終わりに近づいたときに次を読む
+            if state.lastReadIndex + 2 >= state.items.count {
+                return Effect<TimelineAction, Never>(value: .fetchNextPage)
+            } else {
+                return .none
+            }
         case let .timelineResponse(.success(response)):
             if let fetchingPageIndex = state.fetchingPageIndex {
                 state.lastPageIndex = fetchingPageIndex
@@ -33,7 +41,13 @@ extension SharedReducers {
             state.items += response
 
             return .none
-        case .timelineResponse(.failure):
+        case .timelineResponse(.failure(.notFound)):
+            // 404が返ってきた場合、それ以上リクエストを投げない
+            state.hasNext = false
+            state.fetchingPageIndex = nil
+
+            return .none
+        case .timelineResponse(.failure(_)):
             state.fetchingPageIndex = nil
 
             return .none

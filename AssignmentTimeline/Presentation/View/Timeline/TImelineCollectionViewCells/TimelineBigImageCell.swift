@@ -11,6 +11,7 @@ import UIKit
 
 final class TimelineBigImageCell: UICollectionViewCell, ReusableCell {
     enum Const {
+        // パフォーマンスのため、厳密な高さを計算しておく
         static let height: CGFloat = articleImageViewHeight
             + titleLabelHeight
             + TimelineCommentUserView.Const.height
