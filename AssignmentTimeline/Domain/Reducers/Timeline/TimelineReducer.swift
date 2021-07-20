@@ -31,11 +31,15 @@ extension SharedReducers {
         case let .hasReadItem(index):
             state.lastReadIndex = max(state.lastReadIndex, index)
             // 終わりに近づいたときに次を読む
-            if state.lastReadIndex + 2 >= state.items.count {
+            if state.lastReadIndex + 1 >= state.items.count {
                 return Effect<TimelineAction, Never>(value: .fetchNextPage)
             } else {
                 return .none
             }
+        case .reloadItems:
+            state = .empty
+
+            return Effect<TimelineAction, Never>(value: .fetchNextPage)
         case let .timelineResponse(.success(response)):
             if let fetchingPageIndex = state.fetchingPageIndex {
                 state.lastPageIndex = fetchingPageIndex
