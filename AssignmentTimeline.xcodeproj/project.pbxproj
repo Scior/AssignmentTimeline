@@ -13,9 +13,23 @@
 		EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */; };
 		EF8C9F6526A5870600625826 /* JustAnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6426A5870600625826 /* JustAnyError.swift */; };
 		EF8C9F6726A5878A00625826 /* FailAnyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6626A5878A00625826 /* FailAnyError.swift */; };
+		EF8C9F6B26A59D6600625826 /* TimelineBigImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6A26A59D6600625826 /* TimelineBigImageCell.swift */; };
+		EF8C9F6E26A5A4F500625826 /* TimelineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F6D26A5A4F500625826 /* TimelineState.swift */; };
+		EF8C9F7126A5A56B00625826 /* TimelineReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F7026A5A56B00625826 /* TimelineReducer.swift */; };
+		EF8C9F7426A5A5BE00625826 /* TimelineAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F7326A5A5BE00625826 /* TimelineAction.swift */; };
+		EF8C9F7726A5A62200625826 /* TimelineEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F7626A5A62200625826 /* TimelineEnvironment.swift */; };
+		EF8C9F7926A5DB7500625826 /* TimelineCommentUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F7826A5DB7500625826 /* TimelineCommentUserView.swift */; };
+		EF8C9F7C26A5DC4000625826 /* UIView+addCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F7B26A5DC4000625826 /* UIView+addCornerRadius.swift */; };
+		EF8C9F7F26A65B6E00625826 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F7E26A65B6E00625826 /* ReusableCell.swift */; };
+		EF8C9F8226A65D3C00625826 /* TimelineSmallImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8126A65D3C00625826 /* TimelineSmallImageCell.swift */; };
+		EF8C9F8426A65DAB00625826 /* TimelinePickUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8326A65DAB00625826 /* TimelinePickUsersView.swift */; };
+		EF8C9F8826A6643400625826 /* TimelineUserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8726A6643400625826 /* TimelineUserImageView.swift */; };
+		EF8C9F8B26A6875800625826 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EF8C9F8A26A6875800625826 /* SDWebImage */; };
+		EF8C9F8D26A68A5000625826 /* UIImage+filled.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */; };
+		EF8C9F9026A6F48D00625826 /* TimelineBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
-		EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* ViewController.swift */; };
+		EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* TimelineViewController.swift */; };
 		EFA85FFA26A16FE100993DDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA85FF826A16FE100993DDA /* Main.storyboard */; };
 		EFA85FFC26A16FE200993DDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA85FFB26A16FE200993DDA /* Assets.xcassets */; };
 		EFA85FFF26A16FE200993DDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA85FFD26A16FE200993DDA /* LaunchScreen.storyboard */; };
@@ -78,10 +92,23 @@
 		EF8C9F6226A5849900625826 /* TimelineRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRepositoryTests.swift; sourceTree = "<group>"; };
 		EF8C9F6426A5870600625826 /* JustAnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustAnyError.swift; sourceTree = "<group>"; };
 		EF8C9F6626A5878A00625826 /* FailAnyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAnyError.swift; sourceTree = "<group>"; };
+		EF8C9F6A26A59D6600625826 /* TimelineBigImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineBigImageCell.swift; sourceTree = "<group>"; };
+		EF8C9F6D26A5A4F500625826 /* TimelineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineState.swift; sourceTree = "<group>"; };
+		EF8C9F7026A5A56B00625826 /* TimelineReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineReducer.swift; sourceTree = "<group>"; };
+		EF8C9F7326A5A5BE00625826 /* TimelineAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineAction.swift; sourceTree = "<group>"; };
+		EF8C9F7626A5A62200625826 /* TimelineEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEnvironment.swift; sourceTree = "<group>"; };
+		EF8C9F7826A5DB7500625826 /* TimelineCommentUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCommentUserView.swift; sourceTree = "<group>"; };
+		EF8C9F7B26A5DC4000625826 /* UIView+addCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addCornerRadius.swift"; sourceTree = "<group>"; };
+		EF8C9F7E26A65B6E00625826 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		EF8C9F8126A65D3C00625826 /* TimelineSmallImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineSmallImageCell.swift; sourceTree = "<group>"; };
+		EF8C9F8326A65DAB00625826 /* TimelinePickUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePickUsersView.swift; sourceTree = "<group>"; };
+		EF8C9F8726A6643400625826 /* TimelineUserImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineUserImageView.swift; sourceTree = "<group>"; };
+		EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+filled.swift"; sourceTree = "<group>"; };
+		EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineBannerCell.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFA85FF626A16FE100993DDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFA85FF626A16FE100993DDA /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		EFA85FF926A16FE100993DDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFA85FFB26A16FE200993DDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFA85FFE26A16FE200993DDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8C9F8B26A6875800625826 /* SDWebImage in Frameworks */,
 				EFA8606526A3027400993DDA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +209,84 @@
 				EF8C9F6426A5870600625826 /* JustAnyError.swift */,
 			);
 			path = Combine;
+			sourceTree = "<group>";
+		};
+		EF8C9F6926A59D0A00625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F8026A65CFF00625826 /* TImelineCollectionViewCells */,
+				EF8C9F7826A5DB7500625826 /* TimelineCommentUserView.swift */,
+				EF8C9F8326A65DAB00625826 /* TimelinePickUsersView.swift */,
+				EF8C9F8726A6643400625826 /* TimelineUserImageView.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F6C26A5A4E400625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F6D26A5A4F500625826 /* TimelineState.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F6F26A5A55100625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F7026A5A56B00625826 /* TimelineReducer.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F7226A5A5B200625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F7326A5A5BE00625826 /* TimelineAction.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F7526A5A61100625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F7626A5A62200625826 /* TimelineEnvironment.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9F7A26A5DC2B00625826 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F7B26A5DC4000625826 /* UIView+addCornerRadius.swift */,
+				EF8C9F8C26A68A5000625826 /* UIImage+filled.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF8C9F7D26A65B3E00625826 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F7E26A65B6E00625826 /* ReusableCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EF8C9F8026A65CFF00625826 /* TImelineCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9F8F26A6F48D00625826 /* TimelineBannerCell.swift */,
+				EF8C9F6A26A59D6600625826 /* TimelineBigImageCell.swift */,
+				EF8C9F8126A65D3C00625826 /* TimelineSmallImageCell.swift */,
+			);
+			path = TImelineCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		EF8C9F8E26A6AB7200625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EFA85FF626A16FE100993DDA /* TimelineViewController.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 		EFA85FE626A16FE100993DDA = {
@@ -308,9 +414,11 @@
 		EFA8603926A29FE900993DDA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9F7A26A5DC2B00625826 /* Extensions */,
+				EF8C9F7D26A65B3E00625826 /* Protocols */,
+				EFA8603A26A29FF500993DDA /* Storyboards */,
 				EFA8604926A2BF5800993DDA /* View */,
 				EFA8603B26A2A00400993DDA /* ViewControllers */,
-				EFA8603A26A29FF500993DDA /* Storyboards */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -327,7 +435,7 @@
 		EFA8603B26A2A00400993DDA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EFA85FF626A16FE100993DDA /* ViewController.swift */,
+				EF8C9F8E26A6AB7200625826 /* Timeline */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -376,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8604A26A2BF6000993DDA /* Login */,
+				EF8C9F6926A59D0A00625826 /* Timeline */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,6 +504,7 @@
 			children = (
 				EFA8608626A5285300993DDA /* EmptyAction.swift */,
 				EFA8605426A2FCED00993DDA /* Login */,
+				EF8C9F7226A5A5B200625826 /* Timeline */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -403,6 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8605126A2FCCF00993DDA /* Login */,
+				EF8C9F6C26A5A4E400625826 /* Timeline */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -412,6 +523,7 @@
 			children = (
 				EFA8605E26A2FF2D00993DDA /* SharedReducers.swift */,
 				EFA8605726A2FD1800993DDA /* Login */,
+				EF8C9F6F26A5A55100625826 /* Timeline */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -445,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				EFA8605B26A2FD7F00993DDA /* Login */,
+				EF8C9F7526A5A61100625826 /* Timeline */,
 				EFA8608426A50AF100993DDA /* EmptyEnvironment.swift */,
 			);
 			path = Environment;
@@ -553,6 +666,7 @@
 			name = AssignmentTimeline;
 			packageProductDependencies = (
 				EFA8604726A2B49900993DDA /* ComposableArchitecture */,
+				EF8C9F8A26A6875800625826 /* SDWebImage */,
 			);
 			productName = AssignmentTimeline;
 			productReference = EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */;
@@ -627,6 +741,7 @@
 			mainGroup = EFA85FE626A16FE100993DDA;
 			packageReferences = (
 				EFA8604626A2B49900993DDA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				EF8C9F8926A6875800625826 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = EFA85FF026A16FE100993DDA /* Products */;
 			projectDirPath = "";
@@ -694,15 +809,25 @@
 			files = (
 				EFA8608326A5083700993DDA /* LoginAlertView.swift in Sources */,
 				EFA8608726A5285300993DDA /* EmptyAction.swift in Sources */,
+				EF8C9F6E26A5A4F500625826 /* TimelineState.swift in Sources */,
+				EF8C9F6B26A59D6600625826 /* TimelineBigImageCell.swift in Sources */,
+				EF8C9F7426A5A5BE00625826 /* TimelineAction.swift in Sources */,
 				EFA8602526A170DC00993DDA /* URLSessionProtocol.swift in Sources */,
+				EF8C9F9026A6F48D00625826 /* TimelineBannerCell.swift in Sources */,
 				EFA8608126A462FF00993DDA /* LoginAlertState.swift in Sources */,
 				EFA8604526A2B2C300993DDA /* Validator.swift in Sources */,
+				EF8C9F7F26A65B6E00625826 /* ReusableCell.swift in Sources */,
+				EF8C9F8426A65DAB00625826 /* TimelinePickUsersView.swift in Sources */,
+				EF8C9F8826A6643400625826 /* TimelineUserImageView.swift in Sources */,
 				EFA8607726A31F4200993DDA /* LoginResponse.swift in Sources */,
 				EF8C9F5A26A578F600625826 /* TimelineRequest.swift in Sources */,
 				EFA8607B26A3B03700993DDA /* OSLog+network.swift in Sources */,
 				EFA8607426A31CE500993DDA /* LoginRequest.swift in Sources */,
-				EFA85FF726A16FE100993DDA /* ViewController.swift in Sources */,
+				EF8C9F7126A5A56B00625826 /* TimelineReducer.swift in Sources */,
+				EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */,
+				EF8C9F8226A65D3C00625826 /* TimelineSmallImageCell.swift in Sources */,
 				EFA8605326A2FCDA00993DDA /* LoginState.swift in Sources */,
+				EF8C9F8D26A68A5000625826 /* UIImage+filled.swift in Sources */,
 				EFA8603F26A2A29100993DDA /* EmailAddressValidator.swift in Sources */,
 				EFA8603626A175FB00993DDA /* HTTPMethod.swift in Sources */,
 				EFA8605926A2FD2600993DDA /* LoginReducer.swift in Sources */,
@@ -712,6 +837,8 @@
 				EFA8606926A30CD200993DDA /* LoginPasswordValidator.swift in Sources */,
 				EFA8602826A172A600993DDA /* APIRequest.swift in Sources */,
 				EFA8605F26A2FF2D00993DDA /* SharedReducers.swift in Sources */,
+				EF8C9F7C26A5DC4000625826 /* UIView+addCornerRadius.swift in Sources */,
+				EF8C9F7926A5DB7500625826 /* TimelineCommentUserView.swift in Sources */,
 				EFA8608526A50AF100993DDA /* EmptyEnvironment.swift in Sources */,
 				EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */,
 				EF8C9F5F26A5825D00625826 /* TimelineRepository.swift in Sources */,
@@ -719,6 +846,7 @@
 				EFA8602A26A173F000993DDA /* APIClient.swift in Sources */,
 				EFA8605626A2FCF800993DDA /* LoginAction.swift in Sources */,
 				EFA8607126A31C6A00993DDA /* LoginRepository.swift in Sources */,
+				EF8C9F7726A5A62200625826 /* TimelineEnvironment.swift in Sources */,
 				EF8C9F5C26A5792300625826 /* TimelineResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1067,6 +1195,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EF8C9F8926A6875800625826 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
 		EFA8604626A2B49900993DDA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -1078,6 +1214,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EF8C9F8A26A6875800625826 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF8C9F8926A6875800625826 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		EFA8604726A2B49900993DDA /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EFA8604626A2B49900993DDA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
