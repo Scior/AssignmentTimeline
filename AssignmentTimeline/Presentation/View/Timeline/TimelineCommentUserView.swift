@@ -9,8 +9,8 @@ import UIKit
 
 final class TimelineCommentUserView: UIView {
     enum Const {
-        static let height: CGFloat = 48
-        static let userImageSize: CGFloat = 44
+        static let height: CGFloat = 52
+        static let userImageSize: CGFloat = 48
     }
 
     // MARK: - Properties
@@ -65,6 +65,7 @@ final class TimelineCommentUserView: UIView {
         addSubview(commentLabel)
         commentLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            commentLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 4),
             commentLabel.bottomAnchor.constraint(equalTo: userImageView.bottomAnchor),
             commentLabel.leadingAnchor.constraint(equalTo: userNameLabel.leadingAnchor),
             commentLabel.trailingAnchor.constraint(equalTo: userNameLabel.trailingAnchor)

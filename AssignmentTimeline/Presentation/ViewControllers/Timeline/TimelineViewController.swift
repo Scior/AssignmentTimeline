@@ -10,6 +10,12 @@ import ComposableArchitecture
 import UIKit
 
 final class TimelineViewController: UIViewController {
+    enum Const {
+        static var cellWidth: CGFloat {
+            return UIScreen.main.bounds.width - 16
+        }
+    }
+
     // MARK: - Properties
 
     private lazy var collectionView: UICollectionView = {
@@ -112,7 +118,7 @@ extension TimelineViewController: UICollectionViewDelegateFlowLayout {
             height = TimelineBannerCell.Const.height
         }
 
-        return .init(width: UIScreen.main.bounds.width - 16, height: height)
+        return .init(width: Const.cellWidth, height: height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

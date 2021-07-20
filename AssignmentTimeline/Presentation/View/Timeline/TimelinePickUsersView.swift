@@ -96,9 +96,6 @@ final class TimelinePickUsersView: UIView {
         ]))
         pickCountLabel.attributedText = attributedString
 
-        let spacerView = UIView()
-        spacerView.translatesAutoresizingMaskIntoConstraints = false
-
         let iconCount = users.prefix(Const.userIconMaxCount).count
         userIconStackViewWidthConstraint?.constant = Const.calcUserIconStackViewWidth(iconCount: iconCount)
 
