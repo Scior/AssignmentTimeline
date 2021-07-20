@@ -12,13 +12,17 @@ import UIKit
 final class TimelineBigImageCell: UICollectionViewCell, ReusableCell {
     enum Const {
         // パフォーマンスのため、厳密な高さを計算しておく
-        static let height: CGFloat = articleImageViewHeight
-            + titleLabelHeight
-            + TimelineCommentUserView.Const.height
-            + TimelinePickUsersView.Const.height
-            + verticalStackViewSpacing * 2
-            + verticalInset * 2
-        static let articleImageViewHeight: CGFloat = 120
+        static var height: CGFloat {
+            return articleImageViewHeight
+                + titleLabelHeight
+                + TimelineCommentUserView.Const.height
+                + TimelinePickUsersView.Const.height
+                + verticalStackViewSpacing * 2
+                + verticalInset * 2
+        }
+        static var articleImageViewHeight: CGFloat {
+            return TimelineViewController.Const.cellWidth * 2 / 5
+        }
         static let titleLabelHeight: CGFloat = 48
         static let verticalStackViewSpacing: CGFloat = 4
         static let verticalInset: CGFloat = 8
