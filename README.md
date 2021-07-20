@@ -30,4 +30,5 @@
 
 ## 動作確認方法
 
+- Xcode 12.5.1で確認
 - AssignmentTimeline.xcodeprojを開いてビルド
