@@ -43,6 +43,7 @@ extension SharedReducers {
         case let .loginResponse(.success(response)):
             state.alertState.errorType = nil
             environment.accessTokenRepository.save(token: response.accessToken)
+            state.accessToken = response.accessToken
 
             return .none
         case let .loginResponse(.failure(error)):

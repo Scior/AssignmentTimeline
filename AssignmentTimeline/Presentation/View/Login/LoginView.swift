@@ -67,6 +67,7 @@ struct LoginView_Previews: PreviewProvider {
                 loginRepository: LoginRepository(dependency: .init(
                     client: APIClient.shared
                 )),
+                accessTokenRepository: AccessTokenRepository(),
                 mainQueue: .main
             )
         ))
