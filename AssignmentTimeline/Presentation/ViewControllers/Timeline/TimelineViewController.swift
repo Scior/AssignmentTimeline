@@ -66,6 +66,15 @@ final class TimelineViewController: UIViewController {
     }
 
     // MARK: - Methods
+
+    private func getItem(at indexPath: IndexPath) -> TimelineItem? {
+        guard indexPath.section == 0, viewStore.items.indices.contains(indexPath.row) else {
+            assertionFailure("indexPath is out of range")
+            return nil
+        }
+
+        return viewStore.items[indexPath.row]
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -76,14 +85,25 @@ extension TimelineViewController: UICollectionViewDelegateFlowLayout {
         viewStore.send(.hasReadItem(index: indexPath.row))
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = getItem(at: indexPath) else {
+            return
+        }
+
+        // linkが存在した時だけ、外部ブラウザで開く
+        if let url = item.link.flatMap(URL.init(string:)),
+           UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard indexPath.section == 0, viewStore.items.indices.contains(indexPath.row) else {
-            assertionFailure("indexPath is out of range")
+        guard let item = getItem(at: indexPath) else {
             return .init()
         }
 
         let height: CGFloat
-        switch viewStore.items[indexPath.row].type {
+        switch item.type {
         case .bigImage:
             height = TimelineBigImageCell.Const.height
         case .smallImage:
@@ -113,12 +133,10 @@ extension TimelineViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard indexPath.section == 0, viewStore.items.indices.contains(indexPath.row) else {
-            assertionFailure("indexPath is out of range")
+        guard let item = getItem(at: indexPath) else {
             return .init()
         }
 
-        let item = viewStore.items[indexPath.row]
         let cell: UICollectionViewCell
         switch item.type {
         case .bigImage:
