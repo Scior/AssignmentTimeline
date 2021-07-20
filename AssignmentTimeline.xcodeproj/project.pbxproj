@@ -35,6 +35,8 @@
 		EF8C9FA026A709FA00625826 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9F9F26A709FA00625826 /* AppReducer.swift */; };
 		EF8C9FA226A70B2600625826 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA126A70B2600625826 /* AppEnvironment.swift */; };
 		EF8C9FA426A70CA100625826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA326A70CA100625826 /* RootView.swift */; };
+		EF8C9FA626A7166300625826 /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA526A7166300625826 /* AppStoreTests.swift */; };
+		EF8C9FA826A7176000625826 /* AccessTokenRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* TimelineViewController.swift */; };
@@ -120,6 +122,8 @@
 		EF8C9F9F26A709FA00625826 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		EF8C9FA126A70B2600625826 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		EF8C9FA326A70CA100625826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		EF8C9FA526A7166300625826 /* AppStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTests.swift; sourceTree = "<group>"; };
+		EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRepositoryMock.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -649,6 +653,7 @@
 		EFA8608B26A52C6F00993DDA /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */,
 				EFA8608C26A52C7C00993DDA /* APIClientMock.swift */,
 			);
 			path = Mocks;
@@ -657,6 +662,7 @@
 		EFA8608E26A5339300993DDA /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C9FA526A7166300625826 /* AppStoreTests.swift */,
 				EFA8608F26A5339E00993DDA /* Login */,
 			);
 			path = Stores;
@@ -888,10 +894,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */,
+				EF8C9FA826A7176000625826 /* AccessTokenRepositoryMock.swift in Sources */,
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EF8C9F6526A5870600625826 /* JustAnyError.swift in Sources */,
 				EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */,
 				EFA8602E26A1746C00993DDA /* XCTestCase+.swift in Sources */,
+				EF8C9FA626A7166300625826 /* AppStoreTests.swift in Sources */,
 				EFA8609126A533AC00993DDA /* LoginStoreTests.swift in Sources */,
 				EFA8600A26A16FE200993DDA /* AssignmentTimelineTests.swift in Sources */,
 				EF8C9F6726A5878A00625826 /* FailAnyError.swift in Sources */,

@@ -134,16 +134,4 @@ private extension LoginStoreTests {
             return loginReturnValue
         }
     }
-
-    final class AccessTokenRepositoryMock: AccessTokenRepositoryProtocol {
-        var saveReceivedValue: String?
-        var getReturnValue: String!
-        func save(token: String) {
-            saveReceivedValue = token
-        }
-        func get() -> String? {
-            return getReturnValue
-        }
-        func clear() {}
-    }
 }
