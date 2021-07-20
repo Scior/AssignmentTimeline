@@ -19,7 +19,7 @@ extension SharedReducers {
                 loginRepository: LoginRepository(dependency: .init(
                     client: environment.apiClient
                 )),
-                accessTokenRepository: AccessTokenRepository(),
+                accessTokenRepository: environment.accessTokenRepository,
                 mainQueue: environment.mainQueue
             )
         },
@@ -28,7 +28,8 @@ extension SharedReducers {
             action: /AppAction.timeline
         ) { environment in
             return TimelineEnvironment(
-                repository: TimelineRepository(dependency: .init(client: environment.apiClient)),
+                timelineRepository: TimelineRepository(dependency: .init(client: environment.apiClient)),
+                accessTokenRepository: environment.accessTokenRepository,
                 mainQueue: environment.mainQueue
             )
         },

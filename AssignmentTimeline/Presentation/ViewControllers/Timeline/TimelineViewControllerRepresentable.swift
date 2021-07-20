@@ -13,7 +13,8 @@ struct TimelineViewControllerRepresentable: UIViewControllerRepresentable {
             initialState: .empty,
             reducer: SharedReducers.timeline,
             environment: TimelineEnvironment(
-                repository: TimelineRepository(dependency: .init(client: APIClient.shared)),
+                timelineRepository: TimelineRepository(dependency: .init(client: APIClient.shared)),
+                accessTokenRepository: AccessTokenRepository(),
                 mainQueue: .main
             )
         ))

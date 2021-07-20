@@ -30,6 +30,7 @@ struct RootView_Previews: PreviewProvider {
             reducer: SharedReducers.app,
             environment: AppEnvironment(
                 apiClient: APIClient.shared,
+                accessTokenRepository: AccessTokenRepository(),
                 mainQueue: .main
             )
         ))

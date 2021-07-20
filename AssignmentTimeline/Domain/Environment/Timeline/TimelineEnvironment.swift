@@ -9,6 +9,7 @@ import Foundation
 import typealias ComposableArchitecture.AnySchedulerOf
 
 struct TimelineEnvironment {
-    let repository: TimelineRepositoryProtocol
+    let timelineRepository: TimelineRepositoryProtocol
+    let accessTokenRepository: AccessTokenRepositoryProtocol
     let mainQueue: AnySchedulerOf<DispatchQueue>
 }

@@ -10,5 +10,6 @@ import typealias ComposableArchitecture.AnySchedulerOf
 
 struct AppEnvironment {
     let apiClient: APIClientProtocol
+    let accessTokenRepository: AccessTokenRepositoryProtocol
     let mainQueue: AnySchedulerOf<DispatchQueue>
 }

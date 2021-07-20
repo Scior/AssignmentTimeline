@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 reducer: SharedReducers.app,
                 environment: AppEnvironment(
                     apiClient: APIClient.shared,
+                    accessTokenRepository: AccessTokenRepository(),
                     mainQueue: .main
                 )
             ))
