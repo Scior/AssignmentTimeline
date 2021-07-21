@@ -14,6 +14,7 @@ final class TimelineViewController: UIViewController {
         static var cellWidth: CGFloat {
             return UIScreen.main.bounds.width - 16
         }
+        static let cellBackgroundColor = UIColor.white
     }
 
     // MARK: - Properties
@@ -23,9 +24,11 @@ final class TimelineViewController: UIViewController {
         collectionView.register(type: TimelineBigImageCell.self)
         collectionView.register(type: TimelineSmallImageCell.self)
         collectionView.register(type: TimelineBannerCell.self)
+        collectionView.alwaysBounceVertical = true
 
         return collectionView
     }()
+    private let refreshControl = UIRefreshControl()
 
     private let viewStore: ViewStore<TimelineState, TimelineAction>
     private var cancellables: Set<AnyCancellable> = []
@@ -58,6 +61,9 @@ final class TimelineViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
 
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(reloadItems(sender:)), for: .valueChanged)
+
         // MARK: ViewStore
 
         viewStore.send(.fetchNextPage)
@@ -67,6 +73,20 @@ final class TimelineViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.collectionView.reloadData()
+            }
+            .store(in: &cancellables)
+
+        viewStore.publisher.items
+            .map(\.isEmpty)
+            .removeDuplicates()
+            .filter { !$0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self = self, self.refreshControl.isRefreshing  else {
+                    return
+                }
+
+                self.refreshControl.endRefreshing()
             }
             .store(in: &cancellables)
     }
@@ -80,6 +100,11 @@ final class TimelineViewController: UIViewController {
         }
 
         return viewStore.items[indexPath.row]
+    }
+
+    @objc
+    private func reloadItems(sender: UIRefreshControl) {
+        viewStore.send(.reloadItems)
     }
 }
 
@@ -169,4 +194,4 @@ extension TimelineViewController: UICollectionViewDataSource {
     }
 }
 
-// prefetch
+// To improve: UICollectionViewDataSourcePrefetching

@@ -8,5 +8,6 @@
 enum TimelineAction: Equatable {
     case fetchNextPage
     case hasReadItem(index: Int)
+    case reloadItems
     case timelineResponse(Result<TimelineResponse, TimelineRepository.TimelineError>)
 }

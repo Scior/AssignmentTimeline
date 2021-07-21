@@ -36,6 +36,7 @@ final class TimelineBigImageCell: UICollectionViewCell, ReusableCell {
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         stackView.spacing = Const.verticalStackViewSpacing
+        stackView.backgroundColor = TimelineViewController.Const.cellBackgroundColor
 
         return stackView
     }()
@@ -49,6 +50,7 @@ final class TimelineBigImageCell: UICollectionViewCell, ReusableCell {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
         label.numberOfLines = 2
+        label.backgroundColor = TimelineViewController.Const.cellBackgroundColor
 
         return label
     }()
@@ -65,7 +67,7 @@ final class TimelineBigImageCell: UICollectionViewCell, ReusableCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = TimelineViewController.Const.cellBackgroundColor
         contentView.addCornerRadius(4)
 
         contentView.addSubview(articleImageView)

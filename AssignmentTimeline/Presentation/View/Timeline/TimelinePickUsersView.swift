@@ -31,12 +31,14 @@ final class TimelinePickUsersView: UIView {
         stackView.axis = .horizontal
         stackView.spacing = Const.userIconSpacing
         stackView.distribution = .fillProportionally
+        stackView.backgroundColor = TimelineViewController.Const.cellBackgroundColor
         return stackView
     }()
     private let pickCountLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 12)
         label.numberOfLines = 1
+        label.backgroundColor = TimelineViewController.Const.cellBackgroundColor
         return label
     }()
     private var userIconStackViewWidthConstraint: NSLayoutConstraint?
@@ -55,6 +57,7 @@ final class TimelinePickUsersView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        backgroundColor = TimelineViewController.Const.cellBackgroundColor
         isUserInteractionEnabled = false
 
         addSubview(userIconStackView)

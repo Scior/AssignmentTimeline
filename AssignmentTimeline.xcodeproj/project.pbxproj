@@ -37,6 +37,7 @@
 		EF8C9FA426A70CA100625826 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA326A70CA100625826 /* RootView.swift */; };
 		EF8C9FA626A7166300625826 /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA526A7166300625826 /* AppStoreTests.swift */; };
 		EF8C9FA826A7176000625826 /* AccessTokenRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */; };
+		EF8C9FAB26A796FE00625826 /* TimelineStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C9FAA26A796FE00625826 /* TimelineStoreTests.swift */; };
 		EFA85FF326A16FE100993DDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF226A16FE100993DDA /* AppDelegate.swift */; };
 		EFA85FF526A16FE100993DDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF426A16FE100993DDA /* SceneDelegate.swift */; };
 		EFA85FF726A16FE100993DDA /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA85FF626A16FE100993DDA /* TimelineViewController.swift */; };
@@ -124,6 +125,7 @@
 		EF8C9FA326A70CA100625826 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EF8C9FA526A7166300625826 /* AppStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTests.swift; sourceTree = "<group>"; };
 		EF8C9FA726A7176000625826 /* AccessTokenRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenRepositoryMock.swift; sourceTree = "<group>"; };
+		EF8C9FAA26A796FE00625826 /* TimelineStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineStoreTests.swift; sourceTree = "<group>"; };
 		EFA85FEF26A16FE100993DDA /* AssignmentTimeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentTimeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA85FF226A16FE100993DDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA85FF426A16FE100993DDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +308,14 @@
 			children = (
 				EFA85FF626A16FE100993DDA /* TimelineViewController.swift */,
 				EF8C9F9926A7044000625826 /* TimelineViewControllerRepresentable.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		EF8C9FA926A796EE00625826 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C9FAA26A796FE00625826 /* TimelineStoreTests.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -664,6 +674,7 @@
 			children = (
 				EF8C9FA526A7166300625826 /* AppStoreTests.swift */,
 				EFA8608F26A5339E00993DDA /* Login */,
+				EF8C9FA926A796EE00625826 /* Timeline */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -895,6 +906,7 @@
 			files = (
 				EF8C9F6326A5849900625826 /* TimelineRepositoryTests.swift in Sources */,
 				EF8C9FA826A7176000625826 /* AccessTokenRepositoryMock.swift in Sources */,
+				EF8C9FAB26A796FE00625826 /* TimelineStoreTests.swift in Sources */,
 				EFA8603026A174BF00993DDA /* Encodable+.swift in Sources */,
 				EF8C9F6526A5870600625826 /* JustAnyError.swift in Sources */,
 				EFA8608D26A52C7C00993DDA /* APIClientMock.swift in Sources */,
