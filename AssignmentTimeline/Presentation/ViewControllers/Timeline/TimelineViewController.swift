@@ -14,6 +14,7 @@ final class TimelineViewController: UIViewController {
         static var cellWidth: CGFloat {
             return UIScreen.main.bounds.width - 16
         }
+        static let cellBackgroundColor = UIColor.white
     }
 
     // MARK: - Properties

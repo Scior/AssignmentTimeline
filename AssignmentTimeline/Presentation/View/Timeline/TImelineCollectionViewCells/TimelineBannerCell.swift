@@ -36,7 +36,7 @@ final class TimelineBannerCell: UICollectionViewCell, ReusableCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = TimelineViewController.Const.cellBackgroundColor
         contentView.addCornerRadius(4)
 
         contentView.addSubview(bannerImageView)

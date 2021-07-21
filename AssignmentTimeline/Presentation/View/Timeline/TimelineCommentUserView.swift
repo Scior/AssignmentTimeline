@@ -20,12 +20,14 @@ final class TimelineCommentUserView: UIView {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 12)
         label.numberOfLines = 1
+        label.backgroundColor = TimelineViewController.Const.cellBackgroundColor
         return label
     }()
     private let commentLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.numberOfLines = 2
+        label.backgroundColor = TimelineViewController.Const.cellBackgroundColor
         return label
     }()
 
@@ -43,6 +45,7 @@ final class TimelineCommentUserView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        backgroundColor = TimelineViewController.Const.cellBackgroundColor
         isUserInteractionEnabled = false
 
         addSubview(userImageView)
